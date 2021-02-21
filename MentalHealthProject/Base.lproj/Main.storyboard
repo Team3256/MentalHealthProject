@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t63-Jx-otq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -141,21 +141,168 @@
             </objects>
             <point key="canvasLocation" x="1747.826086956522" y="128.57142857142856"/>
         </scene>
-        <!--Item-->
+        <!--Journal-->
         <scene sceneID="bqK-j2-frz">
             <objects>
-                <viewController id="9zK-Ss-Aj4" sceneMemberID="viewController">
+                <viewController id="9zK-Ss-Aj4" customClass="JournalBGViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cOB-F2-dII">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nBw-2N-p8N">
+                                <rect key="frame" x="10" y="108" width="394" height="685"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-Rh-GIV">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="228.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsY-C8-vKO">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228.5"/>
+                                                <state key="normal" title="Journal BG 1"/>
+                                                <connections>
+                                                    <action selector="journal1Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="D3O-Z0-Kmn"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="Byf-pt-SIj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-kN-6Yp">
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228.5"/>
+                                                <state key="normal" title="Journal BG 2"/>
+                                                <connections>
+                                                    <action selector="journal2Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="ibV-sk-TXE"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="vjz-sn-0F1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjO-EW-gmr">
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228.5"/>
+                                                <state key="normal" title="Journal BG 3"/>
+                                                <connections>
+                                                    <action selector="journal3Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XZr-R8-meB"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="Vda-YA-qqr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uaM-IU-RxY">
+                                        <rect key="frame" x="0.0" y="228.5" width="394" height="228"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-6m-H10">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228"/>
+                                                <state key="normal" title="Journal BG 4"/>
+                                                <connections>
+                                                    <action selector="journal4Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="pms-Qm-iJX"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="OmI-Yt-Vlx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-XK-0h8">
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228"/>
+                                                <state key="normal" title="Journal BG 5"/>
+                                                <connections>
+                                                    <action selector="journal5Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XsM-jq-cQT"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="gpY-7N-rmb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-Ky-wka">
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228"/>
+                                                <state key="normal" title="Journal BG 6"/>
+                                                <connections>
+                                                    <action selector="journal6Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="u69-tv-iFq"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="xf7-13-jaf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-Uk-GPp">
+                                        <rect key="frame" x="0.0" y="456.5" width="394" height="228.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe7-9v-QFc">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228.5"/>
+                                                <state key="normal" title="Journal BG 7"/>
+                                                <connections>
+                                                    <action selector="journal7Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="VKD-8S-wVx"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="cJS-AR-qeY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-aN-FpD">
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228.5"/>
+                                                <state key="normal" title="Journal BG 8"/>
+                                                <connections>
+                                                    <action selector="journal8Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="YGW-ao-vKH"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="YCa-oP-eBW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-E7-NAV">
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228.5"/>
+                                                <state key="normal" title="Journal BG 9"/>
+                                                <connections>
+                                                    <action selector="journal9Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="r3q-f6-mSx"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="DOU-vB-VD2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5nU-dQ-VTG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5nU-dQ-VTG" firstAttribute="bottom" secondItem="nBw-2N-p8N" secondAttribute="bottom" constant="20" id="1LP-jC-HCg"/>
+                            <constraint firstItem="nBw-2N-p8N" firstAttribute="top" secondItem="5nU-dQ-VTG" secondAttribute="top" constant="20" id="8ua-gy-A15"/>
+                            <constraint firstItem="nBw-2N-p8N" firstAttribute="leading" secondItem="5nU-dQ-VTG" secondAttribute="leading" constant="10" id="XNK-Pl-KPk"/>
+                            <constraint firstItem="5nU-dQ-VTG" firstAttribute="trailing" secondItem="nBw-2N-p8N" secondAttribute="trailing" constant="10" id="mTC-Fc-L3s"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="IXB-bc-49v"/>
+                    <tabBarItem key="tabBarItem" title="Journal" image="pencil" catalog="system" landscapeImage="pencil.and.outline" largeContentSizeImage="pencil.tip.crop.circle.badge.plus" selectedImage="pencil" id="IXB-bc-49v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-Qz-9W8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="860"/>
+            <point key="canvasLocation" x="57.971014492753625" y="859.82142857142856"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="QXi-6K-EfJ">
+            <objects>
+                <viewController storyboardIdentifier="JBGVC" id="GSd-C4-PwZ" customClass="JournalViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NXl-JX-ECO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-J5-scM">
+                                <rect key="frame" x="10" y="168" width="394" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BG #:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6b-v3-WOu">
+                                <rect key="frame" x="82" y="98" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E67-bZ-iup"/>
+                                    <constraint firstAttribute="width" constant="250" id="arB-AD-Toi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5XT-OB-yAv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O6b-v3-WOu" firstAttribute="centerX" secondItem="NXl-JX-ECO" secondAttribute="centerX" id="6v8-Sm-FbI"/>
+                            <constraint firstItem="AV8-J5-scM" firstAttribute="top" secondItem="O6b-v3-WOu" secondAttribute="bottom" constant="20" id="GRN-Np-WHb"/>
+                            <constraint firstItem="5XT-OB-yAv" firstAttribute="bottom" secondItem="AV8-J5-scM" secondAttribute="bottom" constant="10" id="Rsx-OI-Zi4"/>
+                            <constraint firstItem="AV8-J5-scM" firstAttribute="leading" secondItem="5XT-OB-yAv" secondAttribute="leading" constant="10" id="e4x-kP-qyK"/>
+                            <constraint firstItem="O6b-v3-WOu" firstAttribute="top" secondItem="5XT-OB-yAv" secondAttribute="top" constant="10" id="hIX-5z-iIW"/>
+                            <constraint firstItem="5XT-OB-yAv" firstAttribute="trailing" secondItem="AV8-J5-scM" secondAttribute="trailing" constant="10" id="r6H-0d-UdF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Journal" id="mBE-4b-Zar"/>
+                    <connections>
+                        <outlet property="journalLabel" destination="O6b-v3-WOu" id="5hd-dU-SbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ab5-Sq-vbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="1517"/>
         </scene>
         <!--Item-->
         <scene sceneID="ves-D4-7jL">
@@ -191,7 +338,16 @@
             <point key="canvasLocation" x="3583" y="860"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DOU-vB-VD2"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil.and.outline" catalog="system" width="128" height="128"/>
+        <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

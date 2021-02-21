@@ -16,6 +16,9 @@
 		5B0C2EB525DF4A7000F36D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0C2EB325DF4A7000F36D91 /* LaunchScreen.storyboard */; };
 		5B0C2EC025DF4A7100F36D91 /* MentalHealthProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2EBF25DF4A7100F36D91 /* MentalHealthProjectTests.swift */; };
 		5B0C2ECB25DF4A7100F36D91 /* MentalHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */; };
+		5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */; };
+		5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6025E1E61500AFB17B /* JournalViewController.swift */; };
+		5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6A25E1E67600AFB17B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5B0C2EC625DF4A7100F36D91 /* MentalHealthProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalHealthProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthProjectUITests.swift; sourceTree = "<group>"; };
 		5B0C2ECC25DF4A7100F36D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalBGViewController.swift; sourceTree = "<group>"; };
+		5BB18A6025E1E61500AFB17B /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		5BB18A6A25E1E67600AFB17B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,10 @@
 		5B0C2EA425DF4A6F00F36D91 /* MentalHealthProject */ = {
 			isa = PBXGroup;
 			children = (
+				5BB18A6925E1E66A00AFB17B /* Helpers */,
+				5BB18A5C25E1E5CF00AFB17B /* View Controllers */,
 				5B0C2EA525DF4A6F00F36D91 /* AppDelegate.swift */,
 				5B0C2EA725DF4A6F00F36D91 /* SceneDelegate.swift */,
-				5B0C2EA925DF4A6F00F36D91 /* ViewController.swift */,
 				5B0C2EAB25DF4A6F00F36D91 /* Main.storyboard */,
 				5B0C2EB125DF4A7000F36D91 /* Assets.xcassets */,
 				5B0C2EB325DF4A7000F36D91 /* LaunchScreen.storyboard */,
@@ -129,6 +136,56 @@
 				5B0C2ECC25DF4A7100F36D91 /* Info.plist */,
 			);
 			path = MentalHealthProjectUITests;
+			sourceTree = "<group>";
+		};
+		5BB18A5C25E1E5CF00AFB17B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD5CE6C25E1E77E001C70DF /* Sign-In */,
+				5BB18A5F25E1E5F300AFB17B /* Blogs */,
+				5BB18A5E25E1E5ED00AFB17B /* Up Pley */,
+				5BB18A5D25E1E5E100AFB17B /* Journal */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5BB18A5D25E1E5E100AFB17B /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */,
+				5BB18A6025E1E61500AFB17B /* JournalViewController.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		5BB18A5E25E1E5ED00AFB17B /* Up Pley */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Up Pley";
+			sourceTree = "<group>";
+		};
+		5BB18A5F25E1E5F300AFB17B /* Blogs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Blogs;
+			sourceTree = "<group>";
+		};
+		5BB18A6925E1E66A00AFB17B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BB18A6A25E1E67600AFB17B /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BD5CE6C25E1E77E001C70DF /* Sign-In */ = {
+			isa = PBXGroup;
+			children = (
+				5B0C2EA925DF4A6F00F36D91 /* ViewController.swift */,
+			);
+			path = "Sign-In";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +321,9 @@
 				5B0C2EB025DF4A6F00F36D91 /* MentalHealthProject.xcdatamodeld in Sources */,
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
+				5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */,
+				5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */,
+				5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */,
 				5B0C2EA825DF4A6F00F36D91 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
