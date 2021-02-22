@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Conversation-->
+        <!--Blogs & Information-->
         <scene sceneID="XxZ-LV-hKx">
             <objects>
                 <viewController id="pO7-ha-ehb" sceneMemberID="viewController">
@@ -16,39 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                                      Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-Mk-Nzw">
-                                <rect key="frame" x="12" y="110" width="382" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                               Free Counceling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5C-2s-4cw">
-                                <rect key="frame" x="12" y="329" width="382" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                              Physical Therapist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMQ-Jq-3bZ">
-                                <rect key="frame" x="12" y="557" width="382" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                                      Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfO-ra-pap">
-                                <rect key="frame" x="12" y="110" width="382" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="359-k3-Xuq">
+                                <rect key="frame" x="10" y="108" width="394" height="685"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-nQ-aWi">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="152.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Therapists"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m64-FP-izR">
+                                        <rect key="frame" x="0.0" y="177.5" width="394" height="152.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Blogs"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B92-C0-K3j">
+                                        <rect key="frame" x="0.0" y="355" width="394" height="152.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="ChatBot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-kR-NoZ">
+                                        <rect key="frame" x="0.0" y="532.5" width="394" height="152.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="FAQ"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="36X-EE-6Lh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="36X-EE-6Lh" firstAttribute="trailing" secondItem="359-k3-Xuq" secondAttribute="trailing" constant="10" id="2bA-mL-idW"/>
+                            <constraint firstItem="36X-EE-6Lh" firstAttribute="bottom" secondItem="359-k3-Xuq" secondAttribute="bottom" constant="20" id="UxW-xV-WWg"/>
+                            <constraint firstItem="359-k3-Xuq" firstAttribute="top" secondItem="36X-EE-6Lh" secondAttribute="top" constant="20" id="rin-LQ-RuN"/>
+                            <constraint firstItem="359-k3-Xuq" firstAttribute="leading" secondItem="36X-EE-6Lh" secondAttribute="leading" constant="10" id="xzz-yw-xlL"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Conversation" image="doc.text" catalog="system" id="CNn-su-Myx"/>
+                    <tabBarItem key="tabBarItem" title="Blogs &amp; Information" image="doc.text" catalog="system" id="CNn-su-Myx"/>
                     <navigationItem key="navigationItem" id="md4-io-dgC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ0-w8-hIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -671,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589.8550724637682" y="1587.7232142857142"/>
+            <point key="canvasLocation" x="1781" y="1588"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Huz-Jo-3jA">
@@ -686,7 +689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8D-Xf-y4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="1604"/>
+            <point key="canvasLocation" x="2486" y="1588"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LvD-Wn-X6W">
@@ -701,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dQ-rj-Wm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="1600"/>
+            <point key="canvasLocation" x="3232" y="1588"/>
         </scene>
         <!--Pley-->
         <scene sceneID="ves-D4-7jL">
@@ -777,7 +780,7 @@
                             <constraint firstItem="SZa-oW-ual" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="w2i-M6-tRv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pley" id="HVD-db-qGn"/>
+                    <tabBarItem key="tabBarItem" title="Pley" image="p.circle" catalog="system" id="HVD-db-qGn"/>
                     <connections>
                         <outlet property="view" destination="7UX-ox-dYm" id="HVt-m8-qMd"/>
                     </connections>
@@ -801,7 +804,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2J-dL-M0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3583" y="860"/>
+            <point key="canvasLocation" x="3970" y="860"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -809,6 +812,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="p.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.and.outline" catalog="system" width="128" height="128"/>
         <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
