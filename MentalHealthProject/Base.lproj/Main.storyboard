@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Blog-->
+        <!--Conversation-->
         <scene sceneID="XxZ-LV-hKx">
             <objects>
                 <viewController id="pO7-ha-ehb" sceneMemberID="viewController">
@@ -16,22 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-8A-Ps6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" TEs" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loR-L5-ceE">
-                                <rect key="frame" x="181" y="392" width="213" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                                      Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-Mk-Nzw">
+                                <rect key="frame" x="12" y="110" width="382" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                               Free Counceling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5C-2s-4cw">
+                                <rect key="frame" x="12" y="329" width="382" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                              Physical Therapist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMQ-Jq-3bZ">
+                                <rect key="frame" x="12" y="557" width="382" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                                      Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfO-ra-pap">
+                                <rect key="frame" x="12" y="110" width="382" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="36X-EE-6Lh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Blog" image="doc.text" catalog="system" id="CNn-su-Myx"/>
+                    <tabBarItem key="tabBarItem" title="Conversation" image="doc.text" catalog="system" id="CNn-su-Myx"/>
                     <navigationItem key="navigationItem" id="md4-io-dgC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ0-w8-hIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,7 +352,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search for a Journal By Title" translatesAutoresizingMaskIntoConstraints="NO" id="YsD-5u-FQs">
+                            <searchBar contentMode="redraw" text="" placeholder="Search for a Journal By Title" translatesAutoresizingMaskIntoConstraints="NO" id="YsD-5u-FQs">
                                 <rect key="frame" x="10" y="108" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GvQ-Kr-ZYU"/>
@@ -440,7 +457,7 @@
                             <constraint firstItem="Lar-Fb-91f" firstAttribute="top" secondItem="7bj-LS-p2X" secondAttribute="top" constant="10" id="oVC-uI-3Oi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Write A Review" id="xVc-e8-7hB"/>
+                    <navigationItem key="navigationItem" title="Write A Review" id="zXj-wp-116"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCX-TI-mZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -631,6 +648,61 @@
             </objects>
             <point key="canvasLocation" x="800" y="1588"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="2VM-I6-Uvs">
+            <objects>
+                <viewController id="T5I-lP-1wK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2My-mC-5hV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIa-Gi-wWB">
+                                <rect key="frame" x="34" y="89" width="344" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v3X-S3-3XT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="pxi-RJ-6dG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.8550724637682" y="1587.7232142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Huz-Jo-3jA">
+            <objects>
+                <viewController id="nM4-MT-2Gq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2l-0V-uV5" userLabel="Free Counceling">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jR0-l7-LWa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8D-Xf-y4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2225" y="1604"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LvD-Wn-X6W">
+            <objects>
+                <viewController id="bUC-qD-M2k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yqo-If-8jm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zxz-Rq-gDj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dQ-rj-Wm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2911" y="1600"/>
+        </scene>
         <!--Pley-->
         <scene sceneID="ves-D4-7jL">
             <objects>
@@ -714,7 +786,7 @@
             </objects>
             <point key="canvasLocation" x="448" y="860"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="20U-h1-62Z">
             <objects>
                 <viewController id="lPL-Xv-YdK" sceneMemberID="viewController">
@@ -724,7 +796,7 @@
                         <viewLayoutGuide key="safeArea" id="ku4-Gf-y8i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JdT-Od-6pV"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="JdT-Od-6pV"/>
                     <navigationItem key="navigationItem" id="X41-M3-bp6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2J-dL-M0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -740,6 +812,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.and.outline" catalog="system" width="128" height="128"/>
         <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
