@@ -150,13 +150,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nBw-2N-p8N">
-                                <rect key="frame" x="10" y="108" width="394" height="685"/>
+                                <rect key="frame" x="10" y="158" width="394" height="635"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-Rh-GIV">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="228.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="211.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsY-C8-vKO">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="211.5"/>
                                                 <state key="normal" title="Journal BG 1"/>
                                                 <connections>
                                                     <action selector="journal1Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="D3O-Z0-Kmn"/>
@@ -164,7 +164,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-kN-6Yp">
-                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228.5"/>
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="211.5"/>
                                                 <state key="normal" title="Journal BG 2"/>
                                                 <connections>
                                                     <action selector="journal2Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="ibV-sk-TXE"/>
@@ -172,7 +172,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjO-EW-gmr">
-                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228.5"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="211.5"/>
                                                 <state key="normal" title="Journal BG 3"/>
                                                 <connections>
                                                     <action selector="journal3Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XZr-R8-meB"/>
@@ -182,10 +182,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uaM-IU-RxY">
-                                        <rect key="frame" x="0.0" y="228.5" width="394" height="228"/>
+                                        <rect key="frame" x="0.0" y="211.5" width="394" height="212"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-6m-H10">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="212"/>
                                                 <state key="normal" title="Journal BG 4"/>
                                                 <connections>
                                                     <action selector="journal4Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="pms-Qm-iJX"/>
@@ -193,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-XK-0h8">
-                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228"/>
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="212"/>
                                                 <state key="normal" title="Journal BG 5"/>
                                                 <connections>
                                                     <action selector="journal5Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XsM-jq-cQT"/>
@@ -201,7 +201,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-Ky-wka">
-                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="212"/>
                                                 <state key="normal" title="Journal BG 6"/>
                                                 <connections>
                                                     <action selector="journal6Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="u69-tv-iFq"/>
@@ -211,10 +211,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-Uk-GPp">
-                                        <rect key="frame" x="0.0" y="456.5" width="394" height="228.5"/>
+                                        <rect key="frame" x="0.0" y="423.5" width="394" height="211.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe7-9v-QFc">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="228.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="211.5"/>
                                                 <state key="normal" title="Journal BG 7"/>
                                                 <connections>
                                                     <action selector="journal7Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="VKD-8S-wVx"/>
@@ -222,7 +222,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-aN-FpD">
-                                                <rect key="frame" x="131.5" y="0.0" width="131" height="228.5"/>
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="211.5"/>
                                                 <state key="normal" title="Journal BG 8"/>
                                                 <connections>
                                                     <action selector="journal8Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="YGW-ao-vKH"/>
@@ -230,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-E7-NAV">
-                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="228.5"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="211.5"/>
                                                 <state key="normal" title="Journal BG 9"/>
                                                 <connections>
                                                     <action selector="journal9Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="r3q-f6-mSx"/>
@@ -241,23 +241,37 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFy-5W-sE4">
+                                <rect key="frame" x="107" y="98" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9Pb-tm-Gfd"/>
+                                    <constraint firstAttribute="height" constant="50" id="QYc-Xg-uWm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="My Reviews"/>
+                                <connections>
+                                    <segue destination="NhY-EN-u7V" kind="show" id="Yj0-RX-eqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5nU-dQ-VTG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5nU-dQ-VTG" firstAttribute="bottom" secondItem="nBw-2N-p8N" secondAttribute="bottom" constant="20" id="1LP-jC-HCg"/>
-                            <constraint firstItem="nBw-2N-p8N" firstAttribute="top" secondItem="5nU-dQ-VTG" secondAttribute="top" constant="20" id="8ua-gy-A15"/>
+                            <constraint firstItem="nBw-2N-p8N" firstAttribute="top" secondItem="DFy-5W-sE4" secondAttribute="bottom" constant="10" id="BnC-bM-egk"/>
                             <constraint firstItem="nBw-2N-p8N" firstAttribute="leading" secondItem="5nU-dQ-VTG" secondAttribute="leading" constant="10" id="XNK-Pl-KPk"/>
+                            <constraint firstItem="DFy-5W-sE4" firstAttribute="centerX" secondItem="cOB-F2-dII" secondAttribute="centerX" id="cxV-ia-8PF"/>
                             <constraint firstItem="5nU-dQ-VTG" firstAttribute="trailing" secondItem="nBw-2N-p8N" secondAttribute="trailing" constant="10" id="mTC-Fc-L3s"/>
+                            <constraint firstItem="DFy-5W-sE4" firstAttribute="top" secondItem="5nU-dQ-VTG" secondAttribute="top" constant="10" id="rnw-95-COC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Journal" image="pencil" catalog="system" landscapeImage="pencil.and.outline" largeContentSizeImage="pencil.tip.crop.circle.badge.plus" selectedImage="pencil" id="IXB-bc-49v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-Qz-9W8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701" y="860"/>
+            <point key="canvasLocation" x="-1701.449275362319" y="859.82142857142856"/>
         </scene>
-        <!--Journal-->
+        <!--Write A Journal-->
         <scene sceneID="QXi-6K-EfJ">
             <objects>
                 <viewController storyboardIdentifier="JBGVC" id="GSd-C4-PwZ" customClass="JournalViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,43 +280,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-J5-scM">
-                                <rect key="frame" x="10" y="168" width="394" height="684"/>
+                                <rect key="frame" x="10" y="158" width="394" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BG #:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6b-v3-WOu">
-                                <rect key="frame" x="82" y="98" width="250" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Journal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erS-8j-Y88">
+                                <rect key="frame" x="107" y="98" width="200" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="E67-bZ-iup"/>
-                                    <constraint firstAttribute="width" constant="250" id="arB-AD-Toi"/>
+                                    <constraint firstAttribute="width" constant="200" id="Qu9-yu-56w"/>
+                                    <constraint firstAttribute="height" constant="50" id="WoV-ed-Ew8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-OB-yAv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="O6b-v3-WOu" firstAttribute="centerX" secondItem="NXl-JX-ECO" secondAttribute="centerX" id="6v8-Sm-FbI"/>
-                            <constraint firstItem="AV8-J5-scM" firstAttribute="top" secondItem="O6b-v3-WOu" secondAttribute="bottom" constant="20" id="GRN-Np-WHb"/>
+                            <constraint firstItem="AV8-J5-scM" firstAttribute="top" secondItem="erS-8j-Y88" secondAttribute="bottom" constant="10" id="K4g-Hr-BtK"/>
+                            <constraint firstItem="erS-8j-Y88" firstAttribute="top" secondItem="5XT-OB-yAv" secondAttribute="top" constant="10" id="MZr-uO-MII"/>
                             <constraint firstItem="5XT-OB-yAv" firstAttribute="bottom" secondItem="AV8-J5-scM" secondAttribute="bottom" constant="10" id="Rsx-OI-Zi4"/>
                             <constraint firstItem="AV8-J5-scM" firstAttribute="leading" secondItem="5XT-OB-yAv" secondAttribute="leading" constant="10" id="e4x-kP-qyK"/>
-                            <constraint firstItem="O6b-v3-WOu" firstAttribute="top" secondItem="5XT-OB-yAv" secondAttribute="top" constant="10" id="hIX-5z-iIW"/>
                             <constraint firstItem="5XT-OB-yAv" firstAttribute="trailing" secondItem="AV8-J5-scM" secondAttribute="trailing" constant="10" id="r6H-0d-UdF"/>
+                            <constraint firstItem="erS-8j-Y88" firstAttribute="centerX" secondItem="NXl-JX-ECO" secondAttribute="centerX" id="zKX-im-Tbh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Journal" id="mBE-4b-Zar"/>
-                    <connections>
-                        <outlet property="journalLabel" destination="O6b-v3-WOu" id="5hd-dU-SbM"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Write A Journal" id="mBE-4b-Zar"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab5-Sq-vbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701" y="1517"/>
+            <point key="canvasLocation" x="-2071" y="1588"/>
+        </scene>
+        <!--My Journals-->
+        <scene sceneID="IeB-Ab-3nY">
+            <objects>
+                <viewController id="NhY-EN-u7V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ii0-sr-xLW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for a Journal By Title" translatesAutoresizingMaskIntoConstraints="NO" id="YsD-5u-FQs">
+                                <rect key="frame" x="10" y="108" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GvQ-Kr-ZYU"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gNh-Fr-P5F">
+                                <rect key="frame" x="10" y="168" width="394" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bl2-FN-TbT">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bl2-FN-TbT" id="ARL-19-4lY">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9YF-ng-kv2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="gNh-Fr-P5F" secondAttribute="trailing" constant="10" id="A59-EA-INW"/>
+                            <constraint firstItem="YsD-5u-FQs" firstAttribute="leading" secondItem="9YF-ng-kv2" secondAttribute="leading" constant="10" id="NIL-zs-gSb"/>
+                            <constraint firstItem="gNh-Fr-P5F" firstAttribute="leading" secondItem="9YF-ng-kv2" secondAttribute="leading" constant="10" id="P2j-F9-tSR"/>
+                            <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="YsD-5u-FQs" secondAttribute="trailing" constant="10" id="Pgp-HH-22v"/>
+                            <constraint firstItem="YsD-5u-FQs" firstAttribute="top" secondItem="9YF-ng-kv2" secondAttribute="top" constant="20" id="SDZ-5J-bv9"/>
+                            <constraint firstItem="9YF-ng-kv2" firstAttribute="bottom" secondItem="gNh-Fr-P5F" secondAttribute="bottom" constant="10" id="Y2G-oN-rdL"/>
+                            <constraint firstItem="gNh-Fr-P5F" firstAttribute="top" secondItem="YsD-5u-FQs" secondAttribute="bottom" constant="10" id="kVz-bN-58R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Journals" id="wAq-Ff-DIS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pq1-GJ-n6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1339.1304347826087" y="1587.7232142857142"/>
         </scene>
         <!--Review-->
         <scene sceneID="mMF-aS-AQE">

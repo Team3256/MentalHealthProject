@@ -8,15 +8,11 @@
 import UIKit
 
 class JournalViewController: UIViewController {
-
-    @IBOutlet weak var journalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        journalLabel.text = "BG #: \(journalBGNum)"
         
         switch bg {
         case 1:
