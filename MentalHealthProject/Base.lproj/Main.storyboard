@@ -234,7 +234,7 @@
                                                 <state key="normal" title="Journal BG 9"/>
                                                 <connections>
                                                     <action selector="journal9Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="r3q-f6-mSx"/>
-                                                    <segue destination="GSd-C4-PwZ" kind="show" id="DOU-vB-VD2"/>
+                                                    <segue destination="GSd-C4-PwZ" kind="show" id="2s2-yO-awI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -304,7 +304,7 @@
             </objects>
             <point key="canvasLocation" x="58" y="1517"/>
         </scene>
-        <!--Item-->
+        <!--Blog-->
         <scene sceneID="ves-D4-7jL">
             <objects>
                 <viewController id="C8w-gB-quc" sceneMemberID="viewController">
@@ -314,7 +314,7 @@
                         <viewLayoutGuide key="safeArea" id="7RR-rb-p7D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HVD-db-qGn"/>
+                    <tabBarItem key="tabBarItem" title="Blog" id="HVD-db-qGn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scY-Wh-vKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,7 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DOU-vB-VD2"/>
+        <segue reference="vjz-sn-0F1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
