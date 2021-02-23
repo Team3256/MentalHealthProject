@@ -7,46 +7,29 @@
 
 import UIKit
 
-class JournalViewController: UIViewController {
+class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterSearch: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        switch bg {
-        case 1:
-            view.backgroundColor = .cyan
-        case 2:
-            view.backgroundColor = .yellow
-        case 3:
-            view.backgroundColor = .red
-        case 4:
-            view.backgroundColor = .orange
-        case 5:
-            view.backgroundColor = .systemPink
-        case 6:
-            view.backgroundColor = .gray
-        case 7:
-            view.backgroundColor = .lightGray
-        case 8:
-            view.backgroundColor = .brown
-        case 9:
-            view.backgroundColor = .green
-        default:
-            view.backgroundColor = .white
-        }
+        tableView.delegate = self
+        tableView.dataSource = self
+        filterSearch.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*TODO*/
+        
+        return tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    }
 
 }
