@@ -74,13 +74,42 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let alert = UIAlertController(title: currentJour.title! + " " + currentJour.happinessSurvey!, message: currentJour.bodyJournal, preferredStyle: .alert)
         
-        let cancelButton = UIAlertAction(title: "Back", style: .cancel) { (alert) in
+        let cancelButton = UIAlertAction(title: "Done", style: .cancel) { (alert) in
             tableView.deselectRow(at: indexPath, animated: false)
         }
         alert.addAction(cancelButton)
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            let cardToRemove = self.journals[indexPath.row]
+
+            let alert = UIAlertController(title: "Delete?", message: "Are you sure you want to delete this journal! This action cannot be undo-ed!", preferredStyle: .alert)
+
+            let submitButton = UIAlertAction(title: "YES", style: .destructive) { (action) in
+                context.delete(cardToRemove)
+                try! context.save()
+                self.fetchJournals()
+            }
+
+            alert.addAction(submitButton)
+
+            let stopButton = UIAlertAction(title: "NO", style: .default) { (action) in
+                try! context.save()
+                self.fetchJournals()
+            }
+
+            alert.addAction(stopButton)
+            self.present(alert, animated: true, completion: nil)
+
+            try! context.save()
+            self.fetchJournals()
+        }
+    
+            return UISwipeActionsConfiguration(actions: [action])
+        }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         /*TODO - Filtering*/

@@ -351,6 +351,7 @@
                                 <state key="normal" title="Save Journal"/>
                                 <connections>
                                     <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="BRR-v0-b5R"/>
+                                    <segue destination="NhY-EN-u7V" kind="show" id="I8t-yI-L7n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -718,10 +719,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwN-5j-OT3">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="149"/>
+                                        <rect key="frame" x="0.0" y="60" width="394" height="154"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXg-ZK-WFe">
-                                        <rect key="frame" x="0.0" y="219" width="394" height="535"/>
+                                        <rect key="frame" x="0.0" y="224" width="394" height="530"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -749,7 +750,6 @@
         <!--Blogs-->
         <scene sceneID="2VM-I6-Uvs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Blogs" id="T5I-lP-1wK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2My-mC-5hV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -798,6 +798,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Blogs" id="pxi-RJ-6dG"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2044.9275362318842" y="1587.7232142857142"/>
         </scene>
@@ -980,6 +981,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="I8t-yI-L7n"/>
         <segue reference="OmI-Yt-Vlx"/>
     </inferredMetricsTieBreakers>
     <resources>
