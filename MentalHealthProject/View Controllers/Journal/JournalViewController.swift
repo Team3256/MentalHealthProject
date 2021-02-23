@@ -19,6 +19,8 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Utilities.styleTextFieldsub(filterSearch)
+        
         tableView.delegate = self
         tableView.dataSource = self
         filterSearch.delegate = self

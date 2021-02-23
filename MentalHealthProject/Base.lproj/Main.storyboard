@@ -286,14 +286,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFy-5W-sE4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFy-5W-sE4">
                                 <rect key="frame" x="107" y="98" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9Pb-tm-Gfd"/>
                                     <constraint firstAttribute="height" constant="50" id="QYc-Xg-uWm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="My Journals"/>
+                                <state key="normal" image="MyJournals"/>
                                 <connections>
                                     <segue destination="NhY-EN-u7V" kind="show" id="Yj0-RX-eqw"/>
                                 </connections>
@@ -324,9 +323,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-J5-scM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-J5-scM">
                                 <rect key="frame" x="10" y="158" width="394" height="604"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -341,14 +340,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-ke-tLK">
-                                <rect key="frame" x="82" y="782" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-ke-tLK">
+                                <rect key="frame" x="82" y="782" width="250" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="ekZ-d8-u7U"/>
-                                    <constraint firstAttribute="height" constant="50" id="qws-6W-o2P"/>
+                                    <constraint firstAttribute="height" constant="75" id="qws-6W-o2P"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Save Journal"/>
+                                <state key="normal" image="SaveJournals"/>
                                 <connections>
                                     <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="BRR-v0-b5R"/>
                                     <segue destination="NhY-EN-u7V" kind="show" id="I8t-yI-L7n"/>
@@ -371,6 +369,7 @@
                     <navigationItem key="navigationItem" title="Write A Journal" id="mBE-4b-Zar"/>
                     <connections>
                         <outlet property="bodyText" destination="AV8-J5-scM" id="mpj-CN-yRG"/>
+                        <outlet property="saveButton" destination="C2A-ke-tLK" id="HSd-VU-79n"/>
                         <outlet property="titleField" destination="erS-8j-Y88" id="aaf-Qi-1Y3"/>
                     </connections>
                 </viewController>
@@ -985,6 +984,8 @@
         <segue reference="OmI-Yt-Vlx"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="MyJournals" width="315" height="111"/>
+        <image name="SaveJournals" width="258" height="102"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="p.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

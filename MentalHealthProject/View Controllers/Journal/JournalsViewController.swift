@@ -15,10 +15,16 @@ class JournalsViewController: UIViewController {
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var bodyText: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Utilities.styleTextFieldsub(titleField)
+        
+        titleField.text = ""
+        bodyText.text = "Start journaling!"
+        
         switch bg {
         case 1:
             view.backgroundColor = .cyan
