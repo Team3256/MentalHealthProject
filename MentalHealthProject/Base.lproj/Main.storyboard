@@ -189,7 +189,7 @@
         <!--Journal-->
         <scene sceneID="bqK-j2-frz">
             <objects>
-                <viewController id="9zK-Ss-Aj4" customClass="JournalBGViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JBroadVC" id="9zK-Ss-Aj4" customClass="JournalBGViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cOB-F2-dII">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +293,7 @@
                                     <constraint firstAttribute="height" constant="50" id="QYc-Xg-uWm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="My Reviews"/>
+                                <state key="normal" title="My Journals"/>
                                 <connections>
                                     <segue destination="NhY-EN-u7V" kind="show" id="Yj0-RX-eqw"/>
                                 </connections>
@@ -350,7 +350,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Save Journal"/>
                                 <connections>
-                                    <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="Y5o-ma-ELU"/>
+                                    <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="BRR-v0-b5R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,7 +389,7 @@
                                 <rect key="frame" x="10" y="173" width="394" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bl2-FN-TbT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="bl2-FN-TbT">
                                         <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bl2-FN-TbT" id="ARL-19-4lY">
@@ -407,6 +407,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-gZ-pqT">
+                                <rect key="frame" x="413" y="88" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="E3e-Ct-h1f"/>
+                                    <constraint firstAttribute="width" constant="1" id="IEv-8f-rLv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9YF-ng-kv2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -419,6 +427,8 @@
                             <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="f14-ay-s44" secondAttribute="trailing" constant="10" id="UtE-l3-nTN"/>
                             <constraint firstItem="9YF-ng-kv2" firstAttribute="bottom" secondItem="gNh-Fr-P5F" secondAttribute="bottom" constant="10" id="Y2G-oN-rdL"/>
                             <constraint firstItem="gNh-Fr-P5F" firstAttribute="top" secondItem="f14-ay-s44" secondAttribute="bottom" constant="5" id="hOQ-2C-e8s"/>
+                            <constraint firstItem="N2D-gZ-pqT" firstAttribute="top" secondItem="9YF-ng-kv2" secondAttribute="top" id="jvU-0b-4J5"/>
+                            <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="N2D-gZ-pqT" secondAttribute="trailing" id="pSG-a7-m74"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Journals" id="wAq-Ff-DIS"/>
@@ -884,7 +894,7 @@
         <!--Pley-->
         <scene sceneID="ves-D4-7jL">
             <objects>
-                <viewController id="C8w-gB-quc" sceneMemberID="viewController">
+                <viewController id="C8w-gB-quc" customClass="MainViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGd-ta-dg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -913,20 +923,6 @@
                                     <segue destination="lIA-hF-Ind" kind="show" id="ecf-kr-ceQ"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SZa-oW-ual">
-                                <rect key="frame" x="10" y="238" width="394" height="575"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="msB-A1-8dy">
-                                        <rect key="frame" x="0.0" y="28" width="394" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="msB-A1-8dy" id="kki-sj-rkp">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Pley Searches..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-on-DCW">
                                 <rect key="frame" x="10" y="188" width="394" height="50"/>
                                 <constraints>
@@ -935,18 +931,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NOc-vh-GMD">
+                                <rect key="frame" x="10" y="243" width="394" height="560"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7RR-rb-p7D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MOY-8A-lWJ" firstAttribute="top" secondItem="7RR-rb-p7D" secondAttribute="top" constant="20" id="32U-6P-voF"/>
                             <constraint firstItem="7UX-ox-dYm" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="ILb-ZB-gwP"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="bottom" secondItem="SZa-oW-ual" secondAttribute="bottom" id="Nsm-Gq-ohd"/>
                             <constraint firstItem="7UX-ox-dYm" firstAttribute="top" secondItem="7RR-rb-p7D" secondAttribute="top" constant="20" id="Wht-8h-Asx"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="SZa-oW-ual" secondAttribute="trailing" constant="10" id="ZTW-wq-owo"/>
+                            <constraint firstItem="NOc-vh-GMD" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="aBV-Ai-ZPe"/>
+                            <constraint firstItem="7RR-rb-p7D" firstAttribute="bottom" secondItem="NOc-vh-GMD" secondAttribute="bottom" constant="10" id="dkW-7R-gwH"/>
+                            <constraint firstItem="NOc-vh-GMD" firstAttribute="top" secondItem="WLP-on-DCW" secondAttribute="bottom" constant="5" id="eKw-3T-f0g"/>
                             <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="MOY-8A-lWJ" secondAttribute="trailing" constant="10" id="nNb-ax-YkO"/>
+                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="NOc-vh-GMD" secondAttribute="trailing" constant="10" id="oMF-BY-uWC"/>
                             <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="WLP-on-DCW" secondAttribute="trailing" constant="10" id="vfk-I9-K4R"/>
-                            <constraint firstItem="SZa-oW-ual" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="w2i-M6-tRv"/>
                             <constraint firstItem="WLP-on-DCW" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="w5g-hg-6Ug"/>
                             <constraint firstItem="WLP-on-DCW" firstAttribute="top" secondItem="7UX-ox-dYm" secondAttribute="bottom" constant="30" id="yCY-Cz-u7E"/>
                         </constraints>
@@ -979,7 +980,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Byf-pt-SIj"/>
+        <segue reference="OmI-Yt-Vlx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>

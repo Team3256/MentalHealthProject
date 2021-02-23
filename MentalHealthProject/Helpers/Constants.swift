@@ -10,5 +10,6 @@ import Foundation
 struct Constants {
     struct Storyboard {
         static let journalBG = "JBGVC"
+        static let journalBroad = "JBroadVC"
     }
 }
