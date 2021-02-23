@@ -758,7 +758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdS-oa-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266.6666666666667" y="2311.6071428571427"/>
+            <point key="canvasLocation" x="1987" y="2342"/>
         </scene>
         <!--Blogs-->
         <scene sceneID="2VM-I6-Uvs">
@@ -769,10 +769,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="prK-Hd-1Sc">
-                                <rect key="frame" x="10" y="108" width="394" height="35"/>
+                                <rect key="frame" x="10" y="108" width="394" height="734"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Blogs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-mN-eDs">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="734"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HK0-py-Er0"/>
                                         </constraints>
