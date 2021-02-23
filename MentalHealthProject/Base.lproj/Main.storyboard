@@ -28,6 +28,9 @@
                                         <rect key="frame" x="0.0" y="177.5" width="394" height="152.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Blogs"/>
+                                        <connections>
+                                            <segue destination="T5I-lP-1wK" kind="show" id="9hO-25-eod"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B92-C0-K3j">
                                         <rect key="frame" x="0.0" y="355" width="394" height="152.5"/>
@@ -651,26 +654,102 @@
             </objects>
             <point key="canvasLocation" x="800" y="1588"/>
         </scene>
-        <!--Title-->
+        <!--Blog Information-->
+        <scene sceneID="mju-VS-gWl">
+            <objects>
+                <viewController id="SVR-bO-cgb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1IE-8h-Gle">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rVh-QM-ekS">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbO-BF-fTg">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saJ-zg-vPQ">
+                                        <rect key="frame" x="0.0" y="35.5" width="394" height="103"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GXF-RK-Lfh">
+                                        <rect key="frame" x="0.0" y="148.5" width="394" height="605.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gLH-tC-7qc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="trailing" secondItem="rVh-QM-ekS" secondAttribute="trailing" constant="10" id="cJT-8M-7wn"/>
+                            <constraint firstItem="rVh-QM-ekS" firstAttribute="top" secondItem="gLH-tC-7qc" secondAttribute="top" constant="10" id="hf4-ZC-Exi"/>
+                            <constraint firstItem="rVh-QM-ekS" firstAttribute="leading" secondItem="gLH-tC-7qc" secondAttribute="leading" constant="10" id="ti6-Cw-jjL"/>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="bottom" secondItem="rVh-QM-ekS" secondAttribute="bottom" constant="10" id="yzQ-QH-nFU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog Information" id="gqb-Gf-b5Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdS-oa-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="2312"/>
+        </scene>
+        <!--Blogs-->
         <scene sceneID="2VM-I6-Uvs">
             <objects>
-                <viewController id="T5I-lP-1wK" sceneMemberID="viewController">
+                <viewController title="Blogs" id="T5I-lP-1wK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2My-mC-5hV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIa-Gi-wWB">
-                                <rect key="frame" x="34" y="89" width="344" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="prK-Hd-1Sc">
+                                <rect key="frame" x="10" y="108" width="394" height="734"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Blogs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-mN-eDs">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HK0-py-Er0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-8B-oN8">
+                                        <rect key="frame" x="0.0" y="60" width="394" height="674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TG1-W6-ERK">
+                                                <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TG1-W6-ERK" id="Jto-J1-mrn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <segue destination="SVR-bO-cgb" kind="show" id="xJV-HA-ERQ"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v3X-S3-3XT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="prK-Hd-1Sc" firstAttribute="leading" secondItem="v3X-S3-3XT" secondAttribute="leading" constant="10" id="Y37-cW-8B4"/>
+                            <constraint firstItem="v3X-S3-3XT" firstAttribute="trailing" secondItem="prK-Hd-1Sc" secondAttribute="trailing" constant="10" id="fnU-Vf-h2e"/>
+                            <constraint firstItem="v3X-S3-3XT" firstAttribute="bottom" secondItem="prK-Hd-1Sc" secondAttribute="bottom" constant="20" id="goV-4P-6G7"/>
+                            <constraint firstItem="prK-Hd-1Sc" firstAttribute="top" secondItem="v3X-S3-3XT" secondAttribute="top" constant="20" id="nIm-JG-HtJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="pxi-RJ-6dG"/>
+                    <navigationItem key="navigationItem" title="Blogs" id="pxi-RJ-6dG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
