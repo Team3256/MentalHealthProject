@@ -16,9 +16,11 @@
 		5B0C2EB525DF4A7000F36D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0C2EB325DF4A7000F36D91 /* LaunchScreen.storyboard */; };
 		5B0C2EC025DF4A7100F36D91 /* MentalHealthProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2EBF25DF4A7100F36D91 /* MentalHealthProjectTests.swift */; };
 		5B0C2ECB25DF4A7100F36D91 /* MentalHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */; };
+		5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97732325E48C0800C1D399 /* JournalsViewController.swift */; };
 		5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */; };
 		5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6025E1E61500AFB17B /* JournalViewController.swift */; };
 		5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6A25E1E67600AFB17B /* Constants.swift */; };
+		5BD794C525E4B599009AEF5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD794C425E4B599009AEF5A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +56,11 @@
 		5B0C2EC625DF4A7100F36D91 /* MentalHealthProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalHealthProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthProjectUITests.swift; sourceTree = "<group>"; };
 		5B0C2ECC25DF4A7100F36D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B97732325E48C0800C1D399 /* JournalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsViewController.swift; sourceTree = "<group>"; };
 		5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalBGViewController.swift; sourceTree = "<group>"; };
 		5BB18A6025E1E61500AFB17B /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		5BB18A6A25E1E67600AFB17B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BD794C425E4B599009AEF5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			children = (
 				5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */,
 				5BB18A6025E1E61500AFB17B /* JournalViewController.swift */,
+				5B97732325E48C0800C1D399 /* JournalsViewController.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		5BB18A5E25E1E5ED00AFB17B /* Up Pley */ = {
 			isa = PBXGroup;
 			children = (
+				5BD794C425E4B599009AEF5A /* MainViewController.swift */,
 			);
 			path = "Up Pley";
 			sourceTree = "<group>";
@@ -322,7 +328,9 @@
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
 				5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */,
+				5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */,
 				5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */,
+				5BD794C525E4B599009AEF5A /* MainViewController.swift in Sources */,
 				5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */,
 				5B0C2EA825DF4A6F00F36D91 /* SceneDelegate.swift in Sources */,
 			);
