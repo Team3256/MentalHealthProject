@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		5B0C2EB525DF4A7000F36D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0C2EB325DF4A7000F36D91 /* LaunchScreen.storyboard */; };
 		5B0C2EC025DF4A7100F36D91 /* MentalHealthProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2EBF25DF4A7100F36D91 /* MentalHealthProjectTests.swift */; };
 		5B0C2ECB25DF4A7100F36D91 /* MentalHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */; };
+		5B38C49625E6B8C300D38703 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B38C49525E6B8C300D38703 /* SignInViewController.swift */; };
 		5B6AC0A425E56870003CDAC8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AC0A325E56870003CDAC8 /* Utilities.swift */; };
 		5B6AC0A925E6B4F8003CDAC8 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AC0A825E6B4F8003CDAC8 /* GoogleService-Info (1).plist */; };
 		5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97732325E48C0800C1D399 /* JournalsViewController.swift */; };
@@ -66,6 +67,7 @@
 		5B0C2EC625DF4A7100F36D91 /* MentalHealthProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalHealthProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0C2ECA25DF4A7100F36D91 /* MentalHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthProjectUITests.swift; sourceTree = "<group>"; };
 		5B0C2ECC25DF4A7100F36D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B38C49525E6B8C300D38703 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5B6AC0A325E56870003CDAC8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5B6AC0A825E6B4F8003CDAC8 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		5B97732325E48C0800C1D399 /* JournalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		5BD5CE6C25E1E77E001C70DF /* Sign-In */ = {
 			isa = PBXGroup;
 			children = (
+				5B38C49525E6B8C300D38703 /* SignInViewController.swift */,
 				5B0C2EA925DF4A6F00F36D91 /* ViewController.swift */,
 			);
 			path = "Sign-In";
@@ -227,7 +230,6 @@
 				5234A3AB47B32FD6919BAC31 /* Pods-MentalHealthProjectTests.debug.xcconfig */,
 				FBDE8CEC489327761909C497 /* Pods-MentalHealthProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -516,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B38C49625E6B8C300D38703 /* SignInViewController.swift in Sources */,
 				5B0C2EB025DF4A6F00F36D91 /* MentalHealthProject.xcdatamodeld in Sources */,
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,

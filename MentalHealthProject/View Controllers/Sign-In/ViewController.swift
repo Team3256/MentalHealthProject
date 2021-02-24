@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignUpViewController.swift
 //  MentalHealthProject
 //
 //  Created by Rishi Wadhwa on 2/18/21.
