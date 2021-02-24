@@ -6,6 +6,10 @@ target 'MentalHealthProject' do
   use_frameworks!
 
   # Pods for MentalHealthProject
+pod 'Firebase/Auth'
+pod 'Firebase/Analytics'
+pod 'GoogleSignIn'
+
 
   target 'MentalHealthProjectTests' do
     inherit! :search_paths
