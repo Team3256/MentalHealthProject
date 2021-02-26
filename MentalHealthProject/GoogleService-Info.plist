@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>121075386315-0gpirao925chq5ei145ppngvjvn6bhql.apps.googleusercontent.com</string>
+	<string>339460897754-th46g83dkh3n4vkvldg370ump6gvii5a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.121075386315-0gpirao925chq5ei145ppngvjvn6bhql</string>
+	<string>com.googleusercontent.apps.339460897754-th46g83dkh3n4vkvldg370ump6gvii5a</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAYVwnXN5SzvW8Mph8dT1PSpKA3cOiCZVc</string>
+	<string>AIzaSyA74Wl2_RXmIJhqTLMOLzKgNp8ppwLqBvI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>121075386315</string>
+	<string>339460897754</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.RW.MentalHealthProject</string>
+	<string>com.RW.Spaces-Location</string>
 	<key>PROJECT_ID</key>
-	<string>mentalhealthproject-fd904</string>
+	<string>spacesprojec</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mentalhealthproject-fd904.appspot.com</string>
+	<string>spacesprojec.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:121075386315:ios:30d28213e0e34ec11ed84e</string>
+	<string>1:339460897754:ios:8eab2738f634531a12dee3</string>
 </dict>
 </plist>
