@@ -10,7 +10,7 @@ import FirebaseAuth
 import GoogleSignIn
 
 var currentUserEmail = ""
-var currentUserName = ""
+
 
 class SignInViewController: UIViewController {
     
@@ -26,6 +26,8 @@ class SignInViewController: UIViewController {
         
         Utilities.styleTextFieldmain(usrField)
         Utilities.styleTextFieldmain(pwField)
+        
+        nextButton.isHidden = true
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
@@ -48,6 +50,13 @@ class SignInViewController: UIViewController {
             }
             
             print("You have signed in!")
+            
+            currentUserEmail = email
+            
+            print(currentUserEmail)
+            
+            strongSelf.nextButton.isHidden = false
+            strongSelf.googleButton.isHidden = true
         })
     }
     
@@ -66,6 +75,13 @@ class SignInViewController: UIViewController {
                 }
                 
                 print("You have signed in!")
+                
+                currentUserEmail = email
+                
+                print(currentUserEmail)
+                
+                strongSelf.nextButton.isHidden = false
+                strongSelf.googleButton.isHidden = true
             }
         }))
         
@@ -84,13 +100,10 @@ class SignInViewController: UIViewController {
 
 extension SignInViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        currentUserName = user?.profile.givenName ?? "N/A"
-        currentUserName += " "
-        currentUserName += user?.profile.familyName ?? "N/A"
-        
         currentUserEmail = user?.profile.email ?? "N/A"
-        
-        print(currentUserName)
         print(currentUserEmail)
+        
+        signInButton.isHidden = false
+        nextButton.isHidden = false
     }
 }
