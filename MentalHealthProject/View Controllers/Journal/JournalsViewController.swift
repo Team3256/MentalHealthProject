@@ -48,7 +48,20 @@ class JournalsViewController: UIViewController {
             view.backgroundColor = .white
         }
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
+        view.addGestureRecognizer(tapGesture)
+        
         survey()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func tapOutside() {
+        print("Handling tap!")
+        view.endEditing(true)
     }
     
     func survey() {
@@ -85,11 +98,50 @@ class JournalsViewController: UIViewController {
     
 
     @IBAction func pressSave(_ sender: Any) {
-        let journal = Journal(context: context)
-        journal.happinessSurvey = emojiFeeling
-        journal.title = titleField.text!
-        journal.bodyJournal = bodyText.text!
+        var hasTitle = false
+        var hasBody = false
         
-        try! context.save()
+        if titleField.text == nil || titleField.text == "" {
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x += 20
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x -= 40
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x += 20
+            }, completion: nil)
+        } else {
+            hasTitle = true
+        }
+        
+        if bodyText.text == nil || bodyText.text == "" || bodyText.text == "Start journaling!" {
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.bodyText.center.x += 20
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.bodyText.center.x -= 40
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.bodyText.center.x += 20
+            }, completion: nil)
+        } else {
+            hasBody = true
+        }
+        
+        if hasBody{
+            if hasTitle {
+                let journal = Journal(context: context)
+                journal.happinessSurvey = emojiFeeling
+                journal.title = titleField.text!
+                journal.bodyJournal = bodyText.text!
+                
+                try! context.save()
+            }
+        }
     }
 }

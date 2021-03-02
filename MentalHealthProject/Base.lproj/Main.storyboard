@@ -339,7 +339,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Journal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erS-8j-Y88">
@@ -348,7 +348,7 @@
                                     <constraint firstAttribute="height" constant="50" id="WoV-ed-Ew8"/>
                                     <constraint firstAttribute="width" constant="300" id="XHl-BF-NMg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-ke-tLK">
@@ -415,7 +415,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FMJ-RG-HiT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -706,39 +706,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9g9-OX-b2e">
-                                <rect key="frame" x="10" y="98" width="394" height="754"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpu-Z1-tKn">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="DcH-jS-1Yc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwN-5j-OT3">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="349.5"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXg-ZK-WFe">
-                                        <rect key="frame" x="0.0" y="419.5" width="394" height="334.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3s-6b-ECe">
+                                <rect key="frame" x="10" y="98" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Geu-kp-urP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-Kb-Sg7">
+                                <rect key="frame" x="10" y="158" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="WW3-lx-cfd"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-Zo-Wsl">
+                                <rect key="frame" x="10" y="368" width="394" height="484"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gLH-tC-7qc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9g9-OX-b2e" firstAttribute="top" secondItem="gLH-tC-7qc" secondAttribute="top" constant="10" id="6Br-fX-QEX"/>
-                            <constraint firstItem="gLH-tC-7qc" firstAttribute="trailing" secondItem="9g9-OX-b2e" secondAttribute="trailing" constant="10" id="KKJ-wC-FML"/>
-                            <constraint firstItem="9g9-OX-b2e" firstAttribute="leading" secondItem="gLH-tC-7qc" secondAttribute="leading" constant="10" id="PoX-J8-U5i"/>
-                            <constraint firstItem="gLH-tC-7qc" firstAttribute="bottom" secondItem="9g9-OX-b2e" secondAttribute="bottom" constant="10" id="yka-sP-5HK"/>
+                            <constraint firstItem="l3s-6b-ECe" firstAttribute="top" secondItem="gLH-tC-7qc" secondAttribute="top" constant="10" id="4at-Qe-fNa"/>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="bottom" secondItem="pcv-Zo-Wsl" secondAttribute="bottom" constant="10" id="5bf-OU-uPB"/>
+                            <constraint firstItem="l3s-6b-ECe" firstAttribute="leading" secondItem="gLH-tC-7qc" secondAttribute="leading" constant="10" id="9V8-pg-sBK"/>
+                            <constraint firstItem="aU1-Kb-Sg7" firstAttribute="leading" secondItem="gLH-tC-7qc" secondAttribute="leading" constant="10" id="AdF-ua-FQt"/>
+                            <constraint firstItem="l3s-6b-ECe" firstAttribute="centerX" secondItem="1IE-8h-Gle" secondAttribute="centerX" id="ApG-V6-tdL"/>
+                            <constraint firstItem="aU1-Kb-Sg7" firstAttribute="centerX" secondItem="1IE-8h-Gle" secondAttribute="centerX" id="EaW-pU-yAh"/>
+                            <constraint firstItem="pcv-Zo-Wsl" firstAttribute="leading" secondItem="gLH-tC-7qc" secondAttribute="leading" constant="10" id="F5w-qe-ko8"/>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="trailing" secondItem="pcv-Zo-Wsl" secondAttribute="trailing" constant="10" id="LKM-uO-bXO"/>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="trailing" secondItem="l3s-6b-ECe" secondAttribute="trailing" constant="10" id="M7M-bl-LIK"/>
+                            <constraint firstItem="aU1-Kb-Sg7" firstAttribute="top" secondItem="l3s-6b-ECe" secondAttribute="bottom" constant="10" id="RG7-by-cAc"/>
+                            <constraint firstItem="gLH-tC-7qc" firstAttribute="trailing" secondItem="aU1-Kb-Sg7" secondAttribute="trailing" constant="10" id="Txc-i4-8VC"/>
+                            <constraint firstItem="pcv-Zo-Wsl" firstAttribute="centerX" secondItem="1IE-8h-Gle" secondAttribute="centerX" id="hoX-bc-Ukx"/>
+                            <constraint firstItem="pcv-Zo-Wsl" firstAttribute="top" secondItem="aU1-Kb-Sg7" secondAttribute="bottom" constant="10" id="j45-q9-lRO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blog Information" id="gqb-Gf-b5Q"/>
@@ -1046,14 +1053,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="41f-ZV-A0M">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="150"/>
+                                        <rect key="frame" x="0.0" y="60" width="394" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="350" id="ibu-cR-rIA"/>
-                                            <constraint firstAttribute="height" constant="150" id="oZ7-67-NME"/>
+                                            <constraint firstAttribute="height" constant="200" id="oZ7-67-NME"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqV-Xg-qpb">
-                                        <rect key="frame" x="0.0" y="220" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="270" width="394" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QAY-4Y-Ke1"/>
                                         </constraints>
@@ -1066,7 +1072,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Blog Post..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ITp-06-en5">
-                                        <rect key="frame" x="0.0" y="280" width="394" height="414"/>
+                                        <rect key="frame" x="0.0" y="330" width="394" height="364"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1079,6 +1085,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Add Blog"/>
+                                        <connections>
+                                            <action selector="addBlog:" destination="snw-H0-PSS" eventType="touchUpInside" id="UBa-Dd-xvZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1095,6 +1104,8 @@
                     <navigationItem key="navigationItem" title="Content Creator Dashboard" id="rY9-IV-BQK"/>
                     <connections>
                         <outlet property="blogImg" destination="41f-ZV-A0M" id="Yly-8Z-opa"/>
+                        <outlet property="blogPost" destination="ITp-06-en5" id="K14-gl-mkQ"/>
+                        <outlet property="titleField" destination="XUb-gC-7kq" id="gkY-6Y-iBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajR-KQ-qR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

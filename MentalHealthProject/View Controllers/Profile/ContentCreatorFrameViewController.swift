@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ContentCreatorFrameViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ContentCreatorFrameViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var blogImg: UIImageView!
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var blogPost: UITextView!
     
     private let image = UIImagePickerController()
     
@@ -17,6 +19,21 @@ class ContentCreatorFrameViewController: UIViewController, UINavigationControlle
         super.viewDidLoad()
         
         image.delegate = self
+        titleField.delegate = self
+        blogPost.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapOutside() {
+        print("Handling tap!")
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func chooseImage(_ sender: Any) {
@@ -31,6 +48,68 @@ class ContentCreatorFrameViewController: UIViewController, UINavigationControlle
         }))
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func addBlog(_ sender: Any) {
+        titleField.resignFirstResponder()
+        blogPost.resignFirstResponder()
+        
+        var noTitle = false
+        var noBlog = false
+        
+        if titleField.text == nil || titleField.text == ""{
+            print("No Title")
+            
+            titleField.textColor = .red
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x += 20
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x -= 40
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.titleField.center.x += 20
+            }, completion: nil)
+            
+            noTitle = true
+        }
+        
+        if blogPost.text == nil || blogPost.text == "" || blogPost.text == "Blog Post..." {
+            print("No Blog!")
+            
+            blogPost.textColor = .red
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.blogPost.center.x += 20
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.blogPost.center.x -= 40
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.blogPost.center.x += 20
+            }, completion: nil)
+            
+            noBlog = true
+        }
+        
+        
+        
+        if noBlog || noTitle {
+            //do nothing, my brain hurt rn
+        } else {
+            //TODO: add blog to CloudKit
+            blogPost.textColor = .black
+            titleField.textColor = .black
+            
+            titleField.text = ""
+            blogPost.text = "Blog Post..."
+            blogImg.image = UIImage(named: "")
+        }
     }
     
     func photoLibrary() {
