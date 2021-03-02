@@ -719,10 +719,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwN-5j-OT3">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="306.5"/>
+                                        <rect key="frame" x="0.0" y="60" width="394" height="327.5"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXg-ZK-WFe">
-                                        <rect key="frame" x="0.0" y="376.5" width="394" height="377.5"/>
+                                        <rect key="frame" x="0.0" y="397.5" width="394" height="356.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -1021,7 +1021,7 @@
         <!--Content Creator Dashboard-->
         <scene sceneID="eWH-Hq-Fd2">
             <objects>
-                <viewController id="snw-H0-PSS" sceneMemberID="viewController">
+                <viewController id="snw-H0-PSS" customClass="ContentCreatorFrameViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vu1-ud-tZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1050,7 +1050,12 @@
                                             <constraint firstAttribute="height" constant="50" id="QAY-4Y-Ke1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Choose Image"/>
+                                        <state key="normal" title="Choose Image">
+                                            <color key="titleColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="snw-H0-PSS" eventType="touchUpInside" id="NId-8j-d1z"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Blog Post..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ITp-06-en5">
                                         <rect key="frame" x="0.0" y="280" width="394" height="414"/>
@@ -1080,6 +1085,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Content Creator Dashboard" id="rY9-IV-BQK"/>
+                    <connections>
+                        <outlet property="blogImg" destination="41f-ZV-A0M" id="Yly-8Z-opa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajR-KQ-qR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
