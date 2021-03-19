@@ -33,8 +33,9 @@ class BlogTableViewController: UIViewController, UITableViewDelegate, UITableVie
         loadBlogs()
         tableView.reloadData()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
-        // view.addGestureRecognizer(tapGesture)
+        blogViewButton.layer.cornerRadius = 30
+        blogViewButton.setTitleColor(.blue, for: .normal)
+        blogViewButton.backgroundColor = .systemGray
     }
     
     @objc func tapOutside() {

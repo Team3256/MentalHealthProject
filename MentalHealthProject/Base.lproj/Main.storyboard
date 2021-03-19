@@ -11,7 +11,7 @@
         <!--Blogs & Information-->
         <scene sceneID="XxZ-LV-hKx">
             <objects>
-                <viewController id="pO7-ha-ehb" sceneMemberID="viewController">
+                <viewController id="pO7-ha-ehb" customClass="BasicGenViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qb2-FX-wSf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Blogs &amp; Information" image="doc.text" catalog="system" id="CNn-su-Myx"/>
                     <navigationItem key="navigationItem" id="md4-io-dgC"/>
+                    <connections>
+                        <outlet property="blogB" destination="HUx-nQ-aWi" id="rRf-Kt-cgo"/>
+                        <outlet property="faqB" destination="lSb-kR-NoZ" id="LCu-i1-NpU"/>
+                        <outlet property="newsletterB" destination="B92-C0-K3j" id="Pp1-89-JHn"/>
+                        <outlet property="therapistB" destination="m64-FP-izR" id="c34-zc-jjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ0-w8-hIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -778,16 +784,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="prK-Hd-1Sc">
                                 <rect key="frame" x="10" y="108" width="394" height="734"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Blogs..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ey-eSY">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="rly-Py-7jc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-LL-F1B">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="614"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="pPh-H4-wH7">
@@ -834,24 +832,16 @@
             </objects>
             <point key="canvasLocation" x="2044.9275362318842" y="1587.7232142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Therapist View Controller-->
         <scene sceneID="LvD-Wn-X6W">
             <objects>
-                <viewController id="bUC-qD-M2k" sceneMemberID="viewController">
+                <viewController id="bUC-qD-M2k" customClass="TherapistViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yqo-If-8jm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Therapists..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Oh-q6z">
-                                <rect key="frame" x="10" y="98" width="394" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bH8-by-d2L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zuq-WW-ibQ">
-                                <rect key="frame" x="10" y="158" width="394" height="694"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bWc-s5-Q8e">
@@ -868,17 +858,17 @@
                         <viewLayoutGuide key="safeArea" id="Zxz-Rq-gDj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d2e-Oh-q6z" firstAttribute="top" secondItem="Zxz-Rq-gDj" secondAttribute="top" constant="10" id="3i6-iW-5Kq"/>
-                            <constraint firstItem="Zuq-WW-ibQ" firstAttribute="top" secondItem="d2e-Oh-q6z" secondAttribute="bottom" constant="10" id="9Eb-PX-pyO"/>
-                            <constraint firstItem="Zxz-Rq-gDj" firstAttribute="trailing" secondItem="d2e-Oh-q6z" secondAttribute="trailing" constant="10" id="AN3-p9-0hF"/>
                             <constraint firstItem="Zxz-Rq-gDj" firstAttribute="trailing" secondItem="Zuq-WW-ibQ" secondAttribute="trailing" constant="10" id="PKT-bw-Bqa"/>
+                            <constraint firstItem="Zuq-WW-ibQ" firstAttribute="top" secondItem="Zxz-Rq-gDj" secondAttribute="top" constant="10" id="W18-tw-PrT"/>
                             <constraint firstItem="Zuq-WW-ibQ" firstAttribute="centerX" secondItem="Yqo-If-8jm" secondAttribute="centerX" id="joo-AM-AA9"/>
                             <constraint firstItem="Zuq-WW-ibQ" firstAttribute="leading" secondItem="Zxz-Rq-gDj" secondAttribute="leading" constant="10" id="vOi-dA-VaV"/>
                             <constraint firstItem="Zxz-Rq-gDj" firstAttribute="bottom" secondItem="Zuq-WW-ibQ" secondAttribute="bottom" constant="10" id="vmI-bW-Ney"/>
-                            <constraint firstItem="d2e-Oh-q6z" firstAttribute="leading" secondItem="Zxz-Rq-gDj" secondAttribute="leading" constant="10" id="yU9-6J-Qx2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nf3-GA-cqF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Zuq-WW-ibQ" id="fp1-ej-rJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dQ-rj-Wm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -988,57 +978,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UX-ox-dYm">
-                                <rect key="frame" x="10" y="108" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="6nh-mr-cYA"/>
-                                    <constraint firstAttribute="height" constant="50" id="xh3-rP-xRU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Write a Review"/>
-                                <connections>
-                                    <segue destination="Dv3-c5-gGe" kind="show" id="HIz-ty-AZb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOY-8A-lWJ">
-                                <rect key="frame" x="204" y="108" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GH4-2Q-72Z"/>
-                                    <constraint firstAttribute="width" constant="200" id="S0f-fR-JBM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Events"/>
-                                <connections>
-                                    <segue destination="lIA-hF-Ind" kind="show" id="ecf-kr-ceQ"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Pley Searches..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-on-DCW">
-                                <rect key="frame" x="10" y="188" width="394" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="d01-ey-Qzh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NOc-vh-GMD">
-                                <rect key="frame" x="10" y="243" width="394" height="560"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4Ey-uG-GKd">
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YhE-BQ-0NY">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UX-ox-dYm">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="xh3-rP-xRU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Write a Review"/>
+                                                <connections>
+                                                    <segue destination="Dv3-c5-gGe" kind="show" id="HIz-ty-AZb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOY-8A-lWJ">
+                                                <rect key="frame" x="197" y="0.0" width="197" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GH4-2Q-72Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Events"/>
+                                                <connections>
+                                                    <segue destination="lIA-hF-Ind" kind="show" id="ecf-kr-ceQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-Yx-cy7">
+                                        <rect key="frame" x="0.0" y="80" width="394" height="625"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Pley Searches..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-on-DCW">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="d01-ey-Qzh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NOc-vh-GMD">
+                                                <rect key="frame" x="0.0" y="55" width="394" height="570"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7RR-rb-p7D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MOY-8A-lWJ" firstAttribute="top" secondItem="7RR-rb-p7D" secondAttribute="top" constant="20" id="32U-6P-voF"/>
-                            <constraint firstItem="7UX-ox-dYm" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="ILb-ZB-gwP"/>
-                            <constraint firstItem="7UX-ox-dYm" firstAttribute="top" secondItem="7RR-rb-p7D" secondAttribute="top" constant="20" id="Wht-8h-Asx"/>
-                            <constraint firstItem="NOc-vh-GMD" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="aBV-Ai-ZPe"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="bottom" secondItem="NOc-vh-GMD" secondAttribute="bottom" constant="10" id="dkW-7R-gwH"/>
-                            <constraint firstItem="NOc-vh-GMD" firstAttribute="top" secondItem="WLP-on-DCW" secondAttribute="bottom" constant="5" id="eKw-3T-f0g"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="MOY-8A-lWJ" secondAttribute="trailing" constant="10" id="nNb-ax-YkO"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="NOc-vh-GMD" secondAttribute="trailing" constant="10" id="oMF-BY-uWC"/>
-                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="WLP-on-DCW" secondAttribute="trailing" constant="10" id="vfk-I9-K4R"/>
-                            <constraint firstItem="WLP-on-DCW" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="w5g-hg-6Ug"/>
-                            <constraint firstItem="WLP-on-DCW" firstAttribute="top" secondItem="7UX-ox-dYm" secondAttribute="bottom" constant="30" id="yCY-Cz-u7E"/>
+                            <constraint firstItem="4Ey-uG-GKd" firstAttribute="top" secondItem="7RR-rb-p7D" secondAttribute="top" constant="10" id="2XW-Ch-IJM"/>
+                            <constraint firstItem="7RR-rb-p7D" firstAttribute="bottom" secondItem="4Ey-uG-GKd" secondAttribute="bottom" constant="10" id="3g0-sD-b0c"/>
+                            <constraint firstItem="4Ey-uG-GKd" firstAttribute="leading" secondItem="7RR-rb-p7D" secondAttribute="leading" constant="10" id="peT-K4-5nz"/>
+                            <constraint firstItem="7RR-rb-p7D" firstAttribute="trailing" secondItem="4Ey-uG-GKd" secondAttribute="trailing" constant="10" id="r2K-YU-QAD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pley" image="p.circle" catalog="system" id="HVD-db-qGn"/>

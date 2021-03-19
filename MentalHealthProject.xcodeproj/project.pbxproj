@@ -22,6 +22,10 @@
 		5B3EBEF325EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3EBEF225EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift */; };
 		5B3EBEFB25EED4CA001B33A2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3EBEFA25EED4CA001B33A2 /* ProfileViewController.swift */; };
 		5B60A52E260501DE00C47358 /* SpecBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */; };
+		5B60A5332605073800C47358 /* BasicGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A5322605073800C47358 /* BasicGenViewController.swift */; };
+		5B60A5382605088900C47358 /* TherapistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A5372605088900C47358 /* TherapistViewController.swift */; };
+		5B60A53E26050AAC00C47358 /* TherapistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A53C26050AAC00C47358 /* TherapistTableViewCell.swift */; };
+		5B60A53F26050AAC00C47358 /* TherapistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B60A53D26050AAC00C47358 /* TherapistTableViewCell.xib */; };
 		5B6AC0A425E56870003CDAC8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AC0A325E56870003CDAC8 /* Utilities.swift */; };
 		5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97732325E48C0800C1D399 /* JournalsViewController.swift */; };
 		5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */; };
@@ -79,6 +83,10 @@
 		5B3EBEF225EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCreatorFrameViewController.swift; sourceTree = "<group>"; };
 		5B3EBEFA25EED4CA001B33A2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecBlogViewController.swift; sourceTree = "<group>"; };
+		5B60A5322605073800C47358 /* BasicGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGenViewController.swift; sourceTree = "<group>"; };
+		5B60A5372605088900C47358 /* TherapistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistViewController.swift; sourceTree = "<group>"; };
+		5B60A53C26050AAC00C47358 /* TherapistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistTableViewCell.swift; sourceTree = "<group>"; };
+		5B60A53D26050AAC00C47358 /* TherapistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TherapistTableViewCell.xib; sourceTree = "<group>"; };
 		5B6AC0A325E56870003CDAC8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5B97732325E48C0800C1D399 /* JournalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsViewController.swift; sourceTree = "<group>"; };
 		5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalBGViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +196,23 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		5B60A54326050D5400C47358 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B60A54426050D5E00C47358 /* therapists */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		5B60A54426050D5E00C47358 /* therapists */ = {
+			isa = PBXGroup;
+			children = (
+				5B60A53C26050AAC00C47358 /* TherapistTableViewCell.swift */,
+				5B60A53D26050AAC00C47358 /* TherapistTableViewCell.xib */,
+			);
+			path = therapists;
+			sourceTree = "<group>";
+		};
 		5BB18A5C25E1E5CF00AFB17B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +246,11 @@
 		5BB18A5F25E1E5F300AFB17B /* Blogs */ = {
 			isa = PBXGroup;
 			children = (
+				5B60A54326050D5400C47358 /* cells */,
 				5BE2069E260422DA00333BEE /* BlogTableViewController.swift */,
 				5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */,
+				5B60A5322605073800C47358 /* BasicGenViewController.swift */,
+				5B60A5372605088900C47358 /* TherapistViewController.swift */,
 			);
 			path = Blogs;
 			sourceTree = "<group>";
@@ -379,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B60A53F26050AAC00C47358 /* TherapistTableViewCell.xib in Resources */,
 				5B0C2EB525DF4A7000F36D91 /* LaunchScreen.storyboard in Resources */,
 				5B3EBEEA25EDD041001B33A2 /* GoogleService-Info.plist in Resources */,
 				5B0C2EB225DF4A7000F36D91 /* Assets.xcassets in Resources */,
@@ -546,9 +575,11 @@
 			files = (
 				5B38C49625E6B8C300D38703 /* SignInViewController.swift in Sources */,
 				5B0C2EB025DF4A6F00F36D91 /* MentalHealthProject.xcdatamodeld in Sources */,
+				5B60A5332605073800C47358 /* BasicGenViewController.swift in Sources */,
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
 				5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */,
+				5B60A53E26050AAC00C47358 /* TherapistTableViewCell.swift in Sources */,
 				5B60A52E260501DE00C47358 /* SpecBlogViewController.swift in Sources */,
 				5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */,
 				5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */,
@@ -558,6 +589,7 @@
 				5B3EBEFB25EED4CA001B33A2 /* ProfileViewController.swift in Sources */,
 				5B0C2EA825DF4A6F00F36D91 /* SceneDelegate.swift in Sources */,
 				5B3EBEF325EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift in Sources */,
+				5B60A5382605088900C47358 /* TherapistViewController.swift in Sources */,
 				5BE2069F260422DA00333BEE /* BlogTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
