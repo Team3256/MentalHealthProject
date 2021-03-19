@@ -30,27 +30,49 @@ class JournalsViewController: UIViewController {
         titleField.text = ""
         bodyText.text = "Start journaling!"
         
+        bodyText.backgroundColor = .clear
+        
         switch bg {
         case 1:
             view.backgroundColor = .cyan
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 2:
-            view.backgroundColor = .yellow
+            view.backgroundColor = .systemYellow
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 3:
-            view.backgroundColor = .red
+            view.backgroundColor = .lightGray
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 4:
-            view.backgroundColor = .orange
+            view.backgroundColor = .systemOrange
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 5:
             view.backgroundColor = .systemPink
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 6:
             view.backgroundColor = .gray
+            bodyText.textColor = .black
+            titleField.textColor = .black
         case 7:
-            view.backgroundColor = .lightGray
+            view.backgroundColor = .systemRed
+            bodyText.textColor = .white
+            titleField.textColor = .white
         case 8:
             view.backgroundColor = .brown
+            bodyText.textColor = .white
+            titleField.textColor = .white
         case 9:
-            view.backgroundColor = .green
+            view.backgroundColor = .systemIndigo
+            bodyText.textColor = .white
+            titleField.textColor = .white
         default:
             view.backgroundColor = .white
+            bodyText.textColor = .black
+            titleField.textColor = .black
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
@@ -183,6 +205,9 @@ class JournalsViewController: UIViewController {
                 journal.happinessSurvey = emojiFeeling
                 journal.title = titleField.text!
                 journal.bodyJournal = bodyText.text!
+                
+                titleField.text = ""
+                bodyText.text = "Start journaling..."
                 
                 try! context.save()
             }

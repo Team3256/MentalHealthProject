@@ -219,7 +219,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsY-C8-vKO">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="211.5"/>
-                                                <state key="normal" title="Journal BG 1"/>
+                                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Cyan Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal1Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="D3O-Z0-Kmn"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="Byf-pt-SIj"/>
@@ -227,7 +231,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-kN-6Yp">
                                                 <rect key="frame" x="131.5" y="0.0" width="131" height="211.5"/>
-                                                <state key="normal" title="Journal BG 2"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Yellow Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal2Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="ibV-sk-TXE"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="vjz-sn-0F1"/>
@@ -235,7 +243,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjO-EW-gmr">
                                                 <rect key="frame" x="262.5" y="0.0" width="131.5" height="211.5"/>
-                                                <state key="normal" title="Journal BG 3"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Light Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal3Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XZr-R8-meB"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="Vda-YA-qqr"/>
@@ -248,7 +260,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-6m-H10">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="212"/>
-                                                <state key="normal" title="Journal BG 4"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Orange Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal4Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="pms-Qm-iJX"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="OmI-Yt-Vlx"/>
@@ -256,7 +272,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-XK-0h8">
                                                 <rect key="frame" x="131.5" y="0.0" width="131" height="212"/>
-                                                <state key="normal" title="Journal BG 5"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Pink Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal5Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="XsM-jq-cQT"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="gpY-7N-rmb"/>
@@ -264,7 +284,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-Ky-wka">
                                                 <rect key="frame" x="262.5" y="0.0" width="131.5" height="212"/>
-                                                <state key="normal" title="Journal BG 6"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Dark Journal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal6Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="u69-tv-iFq"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="xf7-13-jaf"/>
@@ -277,7 +301,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe7-9v-QFc">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="211.5"/>
-                                                <state key="normal" title="Journal BG 7"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Red Journal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal7Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="VKD-8S-wVx"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="cJS-AR-qeY"/>
@@ -285,7 +313,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-aN-FpD">
                                                 <rect key="frame" x="131.5" y="0.0" width="131" height="211.5"/>
-                                                <state key="normal" title="Journal BG 8"/>
+                                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Brown Journal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal8Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="YGW-ao-vKH"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="YCa-oP-eBW"/>
@@ -293,7 +325,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-E7-NAV">
                                                 <rect key="frame" x="262.5" y="0.0" width="131.5" height="211.5"/>
-                                                <state key="normal" title="Journal BG 9"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Indigo Journal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="journal9Press:" destination="9zK-Ss-Aj4" eventType="touchUpInside" id="r3q-f6-mSx"/>
                                                     <segue destination="GSd-C4-PwZ" kind="show" id="DOU-vB-VD2"/>
@@ -412,7 +448,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gNh-Fr-P5F">
-                                <rect key="frame" x="10" y="173" width="394" height="679"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="bl2-FN-TbT">
@@ -425,31 +461,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter through Journals..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f14-ay-s44">
-                                <rect key="frame" x="10" y="118" width="394" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="FMJ-RG-HiT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9YF-ng-kv2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="f14-ay-s44" firstAttribute="leading" secondItem="9YF-ng-kv2" secondAttribute="leading" constant="10" id="1PJ-gw-NY8"/>
+                            <constraint firstItem="gNh-Fr-P5F" firstAttribute="top" secondItem="9YF-ng-kv2" secondAttribute="top" constant="10" id="5Ty-Wz-nwl"/>
                             <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="gNh-Fr-P5F" secondAttribute="trailing" constant="10" id="A59-EA-INW"/>
-                            <constraint firstItem="f14-ay-s44" firstAttribute="top" secondItem="9YF-ng-kv2" secondAttribute="top" constant="30" id="Dxx-2a-vir"/>
-                            <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="f14-ay-s44" secondAttribute="trailing" constant="10" id="KHb-SY-C6a"/>
                             <constraint firstItem="gNh-Fr-P5F" firstAttribute="leading" secondItem="9YF-ng-kv2" secondAttribute="leading" constant="10" id="P2j-F9-tSR"/>
-                            <constraint firstItem="9YF-ng-kv2" firstAttribute="trailing" secondItem="f14-ay-s44" secondAttribute="trailing" constant="10" id="UtE-l3-nTN"/>
                             <constraint firstItem="9YF-ng-kv2" firstAttribute="bottom" secondItem="gNh-Fr-P5F" secondAttribute="bottom" constant="10" id="Y2G-oN-rdL"/>
-                            <constraint firstItem="gNh-Fr-P5F" firstAttribute="top" secondItem="f14-ay-s44" secondAttribute="bottom" constant="5" id="hOQ-2C-e8s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Journals" id="wAq-Ff-DIS"/>
                     <connections>
-                        <outlet property="filterSearch" destination="f14-ay-s44" id="gq0-lT-ExH"/>
                         <outlet property="tableView" destination="gNh-Fr-P5F" id="cXY-sj-wMv"/>
                     </connections>
                 </viewController>
@@ -1272,6 +1295,24 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
