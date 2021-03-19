@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class ContentCreatorFrameViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
 
@@ -14,6 +15,8 @@ class ContentCreatorFrameViewController: UIViewController, UINavigationControlle
     @IBOutlet weak var blogPost: UITextView!
     
     private let image = UIImagePickerController()
+    
+    static var isDirty = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,12 +106,38 @@ class ContentCreatorFrameViewController: UIViewController, UINavigationControlle
             //do nothing, my brain hurt rn
         } else {
             //TODO: add blog to CloudKit
+            saveToCK()
+            
             blogPost.textColor = .black
             titleField.textColor = .black
             
             titleField.text = ""
             blogPost.text = "Blog Post..."
             blogImg.image = UIImage(named: "")
+        }
+    }
+    
+    func saveToCK() {
+        //instantiate blog
+        let blogRecord = CKRecord(recordType: "Blog")
+        blogRecord["titleField"] = titleField.text! as CKRecordValue
+        blogRecord["blogBody"] = blogPost.text! as __CKRecordObjCValue
+        
+        //try save
+        CKContainer.default().publicCloudDatabase.save(blogRecord) { [unowned self]record, error in
+            DispatchQueue.main.async {
+                if let _ = error {
+                    //error occurred while saving the blog
+                    print("Error occurred while saving!")
+                    self.view.backgroundColor = .red
+                } else {
+                    //saved the blog
+                    print("Saved!")
+                    self.view.backgroundColor = .green
+                    
+                    ContentCreatorFrameViewController.isDirty = true
+                }
+            }
         }
     }
     

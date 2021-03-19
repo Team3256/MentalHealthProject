@@ -22,6 +22,11 @@ class JournalsViewController: UIViewController {
 
         Utilities.styleTextFieldsub(titleField)
         
+        saveButton.layer.cornerRadius = 30
+        saveButton.setTitleColor(.green, for: .normal) //orange yellow
+        saveButton.backgroundColor = .systemGray //usafa blu
+        saveButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         titleField.text = ""
         bodyText.text = "Start journaling!"
         

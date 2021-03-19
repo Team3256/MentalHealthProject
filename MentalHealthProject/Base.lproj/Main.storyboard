@@ -303,7 +303,10 @@
                                     <constraint firstAttribute="width" constant="200" id="9Pb-tm-Gfd"/>
                                     <constraint firstAttribute="height" constant="50" id="QYc-Xg-uWm"/>
                                 </constraints>
-                                <state key="normal" image="MyJournals"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="My Journals">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="NhY-EN-u7V" kind="show" id="Yj0-RX-eqw"/>
                                 </connections>
@@ -321,6 +324,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Journal" image="pencil" catalog="system" landscapeImage="pencil.and.outline" largeContentSizeImage="pencil.tip.crop.circle.badge.plus" selectedImage="pencil" id="IXB-bc-49v"/>
+                    <connections>
+                        <outlet property="myJour" destination="DFy-5W-sE4" id="u4r-Ql-fDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-Qz-9W8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,7 +363,10 @@
                                     <constraint firstAttribute="width" constant="250" id="ekZ-d8-u7U"/>
                                     <constraint firstAttribute="height" constant="75" id="qws-6W-o2P"/>
                                 </constraints>
-                                <state key="normal" image="SaveJournals"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Save Journal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="BRR-v0-b5R"/>
                                     <segue destination="NhY-EN-u7V" kind="show" id="I8t-yI-L7n"/>
@@ -701,7 +710,7 @@
         <!--Blog Information-->
         <scene sceneID="mju-VS-gWl">
             <objects>
-                <viewController id="SVR-bO-cgb" sceneMemberID="viewController">
+                <viewController id="SVR-bO-cgb" customClass="SpecBlogViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1IE-8h-Gle">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -749,6 +758,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blog Information" id="gqb-Gf-b5Q"/>
+                    <connections>
+                        <outlet property="body" destination="pcv-Zo-Wsl" id="pcX-CF-lKr"/>
+                        <outlet property="title" destination="l3s-6b-ECe" id="XgZ-Cl-o3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdS-oa-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -757,7 +770,7 @@
         <!--Blogs-->
         <scene sceneID="2VM-I6-Uvs">
             <objects>
-                <viewController title="Blogs" id="T5I-lP-1wK" sceneMemberID="viewController">
+                <viewController title="Blogs" id="T5I-lP-1wK" customClass="BlogTableViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2My-mC-5hV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -777,7 +790,7 @@
                                         <rect key="frame" x="0.0" y="60" width="394" height="614"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pPh-H4-wH7">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="pPh-H4-wH7">
                                                 <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pPh-H4-wH7" id="BUJ-lI-Ujs">
@@ -812,6 +825,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blogs" id="pxi-RJ-6dG"/>
+                    <connections>
+                        <outlet property="blogViewButton" destination="LPu-my-i6G" id="bXv-vK-JxH"/>
+                        <outlet property="tableView" destination="wc0-LL-F1B" id="cgi-Xs-cfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -918,7 +935,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Al-rp-0gM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708.6956521739135" y="1601.7857142857142"/>
+            <point key="canvasLocation" x="3713" y="1590"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xea-pY-OZH">
@@ -1075,7 +1092,7 @@
                                         <rect key="frame" x="0.0" y="330" width="394" height="364"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUS-D8-qfS">
@@ -1131,7 +1148,7 @@
         <!--Profile-->
         <scene sceneID="20U-h1-62Z">
             <objects>
-                <viewController id="lPL-Xv-YdK" sceneMemberID="viewController">
+                <viewController id="lPL-Xv-YdK" customClass="ProfileViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMd-uW-yLg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1230,6 +1247,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="JdT-Od-6pV"/>
                     <navigationItem key="navigationItem" id="X41-M3-bp6"/>
+                    <connections>
+                        <outlet property="adminButton" destination="LvA-Is-1RZ" id="Mp3-fs-utd"/>
+                        <outlet property="contentCreatorButton" destination="bca-YH-eTL" id="SVs-5f-wWN"/>
+                        <outlet property="journalsCompleted" destination="APG-qO-f2n" id="Sk4-4J-Ezq"/>
+                        <outlet property="reviewsWritten" destination="q9L-EN-mgK" id="jJY-8c-j48"/>
+                        <outlet property="switchAcct" destination="yMu-yO-Z7P" id="Njk-Tl-q6D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2J-dL-M0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1237,12 +1261,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I8t-yI-L7n"/>
+        <segue reference="Yj0-RX-eqw"/>
         <segue reference="OmI-Yt-Vlx"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="MyJournals" width="315" height="111"/>
-        <image name="SaveJournals" width="258" height="102"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="p.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
