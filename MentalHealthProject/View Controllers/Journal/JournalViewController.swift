@@ -27,9 +27,6 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
-        // view.addGestureRecognizer(tapGesture)
-        
         try! context.save()
         self.tableView.reloadData()
         fetchJournals()

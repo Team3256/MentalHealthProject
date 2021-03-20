@@ -33,6 +33,11 @@
 		5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6A25E1E67600AFB17B /* Constants.swift */; };
 		5BD794C525E4B599009AEF5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD794C425E4B599009AEF5A /* MainViewController.swift */; };
 		5BE2069F260422DA00333BEE /* BlogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2069E260422DA00333BEE /* BlogTableViewController.swift */; };
+		5BFEABE026056A9F000AAA62 /* GymCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFEABDE26056A9F000AAA62 /* GymCell.swift */; };
+		5BFEABE126056A9F000AAA62 /* GymCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFEABDF26056A9F000AAA62 /* GymCell.xib */; };
+		5BFEABEE26056DFD000AAA62 /* RevCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFEABEC26056DFD000AAA62 /* RevCell.swift */; };
+		5BFEABEF26056DFD000AAA62 /* RevCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFEABED26056DFD000AAA62 /* RevCell.xib */; };
+		5BFEABF426057166000AAA62 /* SpecGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFEABF326057166000AAA62 /* SpecGymViewController.swift */; };
 		8691BB7D4A316DE8EE943609 /* Pods_MentalHealthProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCD306A254D036EA338EBA0 /* Pods_MentalHealthProject.framework */; };
 		A0ED41ABF6F04C897C60328C /* Pods_MentalHealthProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8120DC28234DC186547EA3 /* Pods_MentalHealthProjectTests.framework */; };
 		CB38017238AA0F54C2C7BA82 /* Pods_MentalHealthProject_MentalHealthProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1135F4DA21C51F6D800A0502 /* Pods_MentalHealthProject_MentalHealthProjectUITests.framework */; };
@@ -94,6 +99,11 @@
 		5BB18A6A25E1E67600AFB17B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5BD794C425E4B599009AEF5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5BE2069E260422DA00333BEE /* BlogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewController.swift; sourceTree = "<group>"; };
+		5BFEABDE26056A9F000AAA62 /* GymCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCell.swift; sourceTree = "<group>"; };
+		5BFEABDF26056A9F000AAA62 /* GymCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GymCell.xib; sourceTree = "<group>"; };
+		5BFEABEC26056DFD000AAA62 /* RevCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevCell.swift; sourceTree = "<group>"; };
+		5BFEABED26056DFD000AAA62 /* RevCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevCell.xib; sourceTree = "<group>"; };
+		5BFEABF326057166000AAA62 /* SpecGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecGymViewController.swift; sourceTree = "<group>"; };
 		8DCD306A254D036EA338EBA0 /* Pods_MentalHealthProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentalHealthProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61C2695F1887BF037F84A4D /* Pods-MentalHealthProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalHealthProject.debug.xcconfig"; path = "Target Support Files/Pods-MentalHealthProject/Pods-MentalHealthProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8120DC28234DC186547EA3 /* Pods_MentalHealthProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentalHealthProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,7 +248,9 @@
 		5BB18A5E25E1E5ED00AFB17B /* Up Pley */ = {
 			isa = PBXGroup;
 			children = (
+				5BFEABDC26056A76000AAA62 /* cells */,
 				5BD794C425E4B599009AEF5A /* MainViewController.swift */,
+				5BFEABF326057166000AAA62 /* SpecGymViewController.swift */,
 			);
 			path = "Up Pley";
 			sourceTree = "<group>";
@@ -271,6 +283,33 @@
 				5B0C2EA925DF4A6F00F36D91 /* ViewController.swift */,
 			);
 			path = "Sign-In";
+			sourceTree = "<group>";
+		};
+		5BFEABDC26056A76000AAA62 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BFEABE826056C82000AAA62 /* reviews */,
+				5BFEABDD26056A80000AAA62 /* gyms */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		5BFEABDD26056A80000AAA62 /* gyms */ = {
+			isa = PBXGroup;
+			children = (
+				5BFEABDE26056A9F000AAA62 /* GymCell.swift */,
+				5BFEABDF26056A9F000AAA62 /* GymCell.xib */,
+			);
+			path = gyms;
+			sourceTree = "<group>";
+		};
+		5BFEABE826056C82000AAA62 /* reviews */ = {
+			isa = PBXGroup;
+			children = (
+				5BFEABEC26056DFD000AAA62 /* RevCell.swift */,
+				5BFEABED26056DFD000AAA62 /* RevCell.xib */,
+			);
+			path = reviews;
 			sourceTree = "<group>";
 		};
 		87E81D825B1EC21399966EDE /* Pods */ = {
@@ -409,7 +448,9 @@
 			files = (
 				5B60A53F26050AAC00C47358 /* TherapistTableViewCell.xib in Resources */,
 				5B0C2EB525DF4A7000F36D91 /* LaunchScreen.storyboard in Resources */,
+				5BFEABEF26056DFD000AAA62 /* RevCell.xib in Resources */,
 				5B3EBEEA25EDD041001B33A2 /* GoogleService-Info.plist in Resources */,
+				5BFEABE126056A9F000AAA62 /* GymCell.xib in Resources */,
 				5B0C2EB225DF4A7000F36D91 /* Assets.xcassets in Resources */,
 				5B0C2EAD25DF4A6F00F36D91 /* Main.storyboard in Resources */,
 			);
@@ -580,6 +621,7 @@
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
 				5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */,
 				5B60A53E26050AAC00C47358 /* TherapistTableViewCell.swift in Sources */,
+				5BFEABE026056A9F000AAA62 /* GymCell.swift in Sources */,
 				5B60A52E260501DE00C47358 /* SpecBlogViewController.swift in Sources */,
 				5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */,
 				5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */,
@@ -587,8 +629,10 @@
 				5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */,
 				5B6AC0A425E56870003CDAC8 /* Utilities.swift in Sources */,
 				5B3EBEFB25EED4CA001B33A2 /* ProfileViewController.swift in Sources */,
+				5BFEABF426057166000AAA62 /* SpecGymViewController.swift in Sources */,
 				5B0C2EA825DF4A6F00F36D91 /* SceneDelegate.swift in Sources */,
 				5B3EBEF325EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift in Sources */,
+				5BFEABEE26056DFD000AAA62 /* RevCell.swift in Sources */,
 				5B60A5382605088900C47358 /* TherapistViewController.swift in Sources */,
 				5BE2069F260422DA00333BEE /* BlogTableViewController.swift in Sources */,
 			);
