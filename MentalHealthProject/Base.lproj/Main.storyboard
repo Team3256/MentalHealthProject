@@ -500,7 +500,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-MP-Uo4">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-MP-Uo4">
                                         <rect key="frame" x="0.0" y="55" width="394" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -508,7 +508,7 @@
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
@@ -561,6 +561,7 @@
                         <outlet property="addRating" destination="OHZ-9B-nhP" id="WZl-zr-64L"/>
                         <outlet property="bodyText" destination="Xne-MP-Uo4" id="s86-xK-itG"/>
                         <outlet property="nameLabel" destination="8tW-kq-Jvd" id="Mb9-0c-evI"/>
+                        <outlet property="revLabel" destination="d51-3p-ScK" id="hc9-yv-Bwx"/>
                         <outlet property="tableView" destination="rd1-Fc-Xr0" id="LG4-Ke-EQf"/>
                     </connections>
                 </viewController>
@@ -571,59 +572,96 @@
         <!--Review-->
         <scene sceneID="mMF-aS-AQE">
             <objects>
-                <viewController title="Review" id="Dv3-c5-gGe" sceneMemberID="viewController">
+                <viewController title="Review" id="Dv3-c5-gGe" customClass="AddReviewViewController" customModule="MentalHealthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FLv-Ti-CJb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-qh-laC">
-                                <rect key="frame" x="10" y="228" width="394" height="400"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Review here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-qh-laC">
+                                <rect key="frame" x="10" y="188" width="394" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="Pf3-dL-fPw"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2h-vE-hkb">
-                                <rect key="frame" x="107" y="658" width="200" height="50"/>
+                                <rect key="frame" x="107" y="718" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8tT-7P-t4S"/>
                                     <constraint firstAttribute="height" constant="50" id="hMj-hv-61t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Publish"/>
+                                <connections>
+                                    <action selector="pressSave:" destination="Dv3-c5-gGe" eventType="touchUpInside" id="Mc0-2q-TDn"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lar-Fb-91f">
-                                <rect key="frame" x="82" y="98" width="250" height="100"/>
+                                <rect key="frame" x="7" y="98" width="400" height="60"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i15-5w-fYi">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i15-5w-fYi">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="8PO-v6-fsa"/>
+                                            <constraint firstAttribute="height" constant="60" id="PhF-1a-a38"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-Tk-5ko">
+                                <rect key="frame" x="57" y="618" width="300" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rating 1-5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVQ-ib-7Uj">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="03p-Td-1Gt"/>
-                                    <constraint firstAttribute="height" constant="100" id="u56-VX-d1i"/>
+                                    <constraint firstAttribute="width" constant="300" id="q9E-6U-2JE"/>
+                                    <constraint firstAttribute="height" constant="50" id="w08-15-JMe"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-JB-pbN">
+                                <rect key="frame" x="10" y="778" width="394" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Y9j-AH-7ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7bj-LS-p2X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7bj-LS-p2X" firstAttribute="trailing" secondItem="ddw-JB-pbN" secondAttribute="trailing" constant="10" id="3Di-0R-PAS"/>
+                            <constraint firstItem="v2h-vE-hkb" firstAttribute="top" secondItem="Fqs-Tk-5ko" secondAttribute="bottom" constant="50" id="5gK-e6-3y6"/>
                             <constraint firstItem="v2h-vE-hkb" firstAttribute="centerX" secondItem="FLv-Ti-CJb" secondAttribute="centerX" id="7lt-yy-CEg"/>
-                            <constraint firstItem="v2h-vE-hkb" firstAttribute="top" secondItem="5Ea-qh-laC" secondAttribute="bottom" constant="30" id="HmF-Vt-58T"/>
                             <constraint firstItem="5Ea-qh-laC" firstAttribute="leading" secondItem="7bj-LS-p2X" secondAttribute="leading" constant="10" id="HrA-zg-l35"/>
+                            <constraint firstItem="Fqs-Tk-5ko" firstAttribute="centerX" secondItem="FLv-Ti-CJb" secondAttribute="centerX" id="JEe-Ry-asK"/>
                             <constraint firstItem="5Ea-qh-laC" firstAttribute="top" secondItem="Lar-Fb-91f" secondAttribute="bottom" constant="30" id="Qz5-Wz-Y40"/>
                             <constraint firstItem="Lar-Fb-91f" firstAttribute="centerX" secondItem="FLv-Ti-CJb" secondAttribute="centerX" id="gcS-aS-ZON"/>
                             <constraint firstItem="7bj-LS-p2X" firstAttribute="trailing" secondItem="5Ea-qh-laC" secondAttribute="trailing" constant="10" id="imh-LC-gfg"/>
                             <constraint firstItem="Lar-Fb-91f" firstAttribute="top" secondItem="7bj-LS-p2X" secondAttribute="top" constant="10" id="oVC-uI-3Oi"/>
+                            <constraint firstItem="ddw-JB-pbN" firstAttribute="top" secondItem="v2h-vE-hkb" secondAttribute="bottom" constant="10" id="pqi-EF-FEg"/>
+                            <constraint firstItem="Fqs-Tk-5ko" firstAttribute="top" secondItem="5Ea-qh-laC" secondAttribute="bottom" constant="30" id="uPY-br-Dep"/>
+                            <constraint firstItem="ddw-JB-pbN" firstAttribute="leading" secondItem="7bj-LS-p2X" secondAttribute="leading" constant="10" id="yZ8-yg-D5k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Write A Review" id="zXj-wp-116"/>
+                    <connections>
+                        <outlet property="body" destination="5Ea-qh-laC" id="4gk-k6-sSr"/>
+                        <outlet property="err" destination="ddw-JB-pbN" id="Ub0-9Q-YVi"/>
+                        <outlet property="publish" destination="v2h-vE-hkb" id="0cF-0o-5el"/>
+                        <outlet property="rating" destination="vVQ-ib-7Uj" id="zCF-OP-Wcs"/>
+                        <outlet property="ratingName" destination="i15-5w-fYi" id="mqA-OS-gvf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCX-TI-mZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -867,7 +905,7 @@
                     <navigationItem key="navigationItem" title="Blog Information" id="gqb-Gf-b5Q"/>
                     <connections>
                         <outlet property="body" destination="pcv-Zo-Wsl" id="pcX-CF-lKr"/>
-                        <outlet property="title" destination="l3s-6b-ECe" id="XgZ-Cl-o3Y"/>
+                        <outlet property="titleLabe" destination="l3s-6b-ECe" id="nDp-WZ-iQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdS-oa-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

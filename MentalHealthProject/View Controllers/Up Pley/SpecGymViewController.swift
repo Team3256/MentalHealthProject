@@ -20,6 +20,7 @@ class SpecGymViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addRating: UIButton!
+    @IBOutlet weak var revLabel: UILabel!
 
     var rev = [Reviews]()
     
@@ -46,6 +47,9 @@ class SpecGymViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         loadRev()
     }
+
+    var sumRev = 0
+    var count = 0
     
     func loadRev() {
         let pred = NSPredicate(value: true)
@@ -66,6 +70,8 @@ class SpecGymViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(review.name!)
                 review.reason = record["body"]
                 review.rating = record["rating"]
+                self.sumRev += review.rating
+                self.count+=1
                 allRev.append(review)
             }
             print("Fetched!")

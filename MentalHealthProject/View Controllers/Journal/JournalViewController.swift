@@ -10,7 +10,6 @@ import UIKit
 class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var filterSearch: UITextField!
     
     var journals = [Journal]()
     var filteredJournals = [Journal]()
@@ -19,11 +18,8 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Utilities.styleTextFieldsub(filterSearch)
-        
         tableView.delegate = self
         tableView.dataSource = self
-        filterSearch.delegate = self
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
