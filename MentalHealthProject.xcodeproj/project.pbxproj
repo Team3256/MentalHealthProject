@@ -28,6 +28,8 @@
 		5B60A53F26050AAC00C47358 /* TherapistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B60A53D26050AAC00C47358 /* TherapistTableViewCell.xib */; };
 		5B6AC0A425E56870003CDAC8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AC0A325E56870003CDAC8 /* Utilities.swift */; };
 		5B97732425E48C0800C1D399 /* JournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97732325E48C0800C1D399 /* JournalsViewController.swift */; };
+		5BA9013F2607F14C0027BC2E /* AdminMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9013E2607F14C0027BC2E /* AdminMainViewController.swift */; };
+		5BA901442607FE2E0027BC2E /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA901432607FE2E0027BC2E /* NewsletterViewController.swift */; };
 		5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */; };
 		5BB18A6125E1E61500AFB17B /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6025E1E61500AFB17B /* JournalViewController.swift */; };
 		5BB18A6B25E1E67600AFB17B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB18A6A25E1E67600AFB17B /* Constants.swift */; };
@@ -95,6 +97,8 @@
 		5B60A53D26050AAC00C47358 /* TherapistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TherapistTableViewCell.xib; sourceTree = "<group>"; };
 		5B6AC0A325E56870003CDAC8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5B97732325E48C0800C1D399 /* JournalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsViewController.swift; sourceTree = "<group>"; };
+		5BA9013E2607F14C0027BC2E /* AdminMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainViewController.swift; sourceTree = "<group>"; };
+		5BA901432607FE2E0027BC2E /* NewsletterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
 		5BB18A5725E1E5C600AFB17B /* JournalBGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalBGViewController.swift; sourceTree = "<group>"; };
 		5BB18A6025E1E61500AFB17B /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		5BB18A6A25E1E67600AFB17B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -225,6 +229,14 @@
 			path = therapists;
 			sourceTree = "<group>";
 		};
+		5BA9013A2607F1390027BC2E /* Admin Account */ = {
+			isa = PBXGroup;
+			children = (
+				5BA9013E2607F14C0027BC2E /* AdminMainViewController.swift */,
+			);
+			path = "Admin Account";
+			sourceTree = "<group>";
+		};
 		5BB18A5C25E1E5CF00AFB17B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +278,7 @@
 				5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */,
 				5B60A5322605073800C47358 /* BasicGenViewController.swift */,
 				5B60A5372605088900C47358 /* TherapistViewController.swift */,
+				5BA901432607FE2E0027BC2E /* NewsletterViewController.swift */,
 			);
 			path = Blogs;
 			sourceTree = "<group>";
@@ -318,6 +331,7 @@
 		5BFEAC1326057B55000AAA62 /* Acct Types */ = {
 			isa = PBXGroup;
 			children = (
+				5BA9013A2607F1390027BC2E /* Admin Account */,
 				5B3EBEF225EDF6B4001B33A2 /* ContentCreatorFrameViewController.swift */,
 			);
 			path = "Acct Types";
@@ -630,7 +644,9 @@
 				5BFEAC0E26057A5C000AAA62 /* AddReviewViewController.swift in Sources */,
 				5B60A5332605073800C47358 /* BasicGenViewController.swift in Sources */,
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
+				5BA901442607FE2E0027BC2E /* NewsletterViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
+				5BA9013F2607F14C0027BC2E /* AdminMainViewController.swift in Sources */,
 				5BB18A5825E1E5C600AFB17B /* JournalBGViewController.swift in Sources */,
 				5B60A53E26050AAC00C47358 /* TherapistTableViewCell.swift in Sources */,
 				5BFEABE026056A9F000AAA62 /* GymCell.swift in Sources */,

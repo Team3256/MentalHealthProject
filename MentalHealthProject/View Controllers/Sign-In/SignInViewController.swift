@@ -103,7 +103,9 @@ extension SignInViewController: GIDSignInDelegate {
         currentUserEmail = user?.profile.email ?? "N/A"
         print(currentUserEmail)
         
-        signInButton.isHidden = false
-        nextButton.isHidden = false
+        if currentUserEmail != "N/A" {
+            signInButton.isHidden = false
+            nextButton.isHidden = false
+        }
     }
 }

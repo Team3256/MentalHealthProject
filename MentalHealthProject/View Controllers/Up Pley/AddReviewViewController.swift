@@ -64,6 +64,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
         myReview["body"] = reason as __CKRecordObjCValue
         myReview["rating"] = rating as CKRecordValue
         myReview["company"] = currentSel.name as CKRecordValue
+        myReview["name"] = currentUserEmail as CKRecordValue
         
         //try save
         CKContainer.default().publicCloudDatabase.save(myReview) { [unowned self]record, error in

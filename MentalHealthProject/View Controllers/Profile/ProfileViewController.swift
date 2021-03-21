@@ -10,7 +10,6 @@ import UIKit
 class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var journalsCompleted: UILabel!
-    @IBOutlet weak var reviewsWritten: UILabel!
     @IBOutlet weak var switchAcct: UITextField!
     @IBOutlet weak var adminButton: UIButton!
     @IBOutlet weak var contentCreatorButton: UIButton!
@@ -22,6 +21,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         
         adminButton.isHidden = true
         contentCreatorButton.isHidden = true
+        
+        var journals = [Journal]()
+        journals = try! context.fetch(Journal.fetchRequest())
+        
+        journalsCompleted.text = "Journals Completed: \(journals.count)"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
