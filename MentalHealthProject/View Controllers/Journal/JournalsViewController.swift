@@ -11,7 +11,7 @@ var emojiFeeling = ""
 
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-class JournalsViewController: UIViewController {
+class JournalsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var bodyText: UITextView!
@@ -19,7 +19,9 @@ class JournalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        titleField.delegate = self
+        
         Utilities.styleTextFieldsub(titleField)
         
         saveButton.layer.cornerRadius = 30
@@ -75,20 +77,12 @@ class JournalsViewController: UIViewController {
             titleField.textColor = .black
         }
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOutside))
-        view.addGestureRecognizer(tapGesture)
-        
         survey()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    @objc func tapOutside() {
-        print("Handling tap!")
-        view.endEditing(true)
     }
     
     func survey() {
