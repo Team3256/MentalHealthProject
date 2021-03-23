@@ -30,20 +30,20 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func pressSave(_ sender: Any) {
-        let bg = Int(rating.text ?? "0") ?? 0
+        let bg = Int(rating.text ?? "1") ?? 1
         
         if bg > 0 && bg <= 5 {
-            let txt = ratingName.text
+            let txt = CensorMethods.censorPhrase(ratingName.text!)
             
-            if txt == "" || txt == nil {
+            if txt == "" {
                 showError("Missing rating name!")
             } else {
-                let body = self.body.text
+                let bodyT = CensorMethods.censorPhrase(body.text!)
                 
-                if body == "" || body == nil || body == "Review here..." {
+                if bodyT == "" || bodyT == "Review here..." {
                     showError("Missing reason of review!")
                 } else {
-                    saveToCK(txt!, body!, bg)
+                    saveToCK(txt, bodyT, bg)
                 }
             }
             
