@@ -21,7 +21,7 @@ class NewsletterViewController: UIViewController {
     func fetch() {
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "creationDate", ascending: true)
-        let query = CKQuery(recordType: "Review", predicate: pred)
+        let query = CKQuery(recordType: "Newsletter", predicate: pred)
         query.sortDescriptors = [sort]
         
         let operation = CKQueryOperation(query: query)
