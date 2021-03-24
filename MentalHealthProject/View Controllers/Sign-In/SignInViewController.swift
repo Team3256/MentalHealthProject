@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import CloudKit
 
 var currentUserEmail = ""
 
@@ -31,9 +32,60 @@ class SignInViewController: UIViewController {
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
+        
+        fetchCK()
     }
     
+    func fetchCK() {
+        let pred = NSPredicate(value: true)
+        let sort = NSSortDescriptor(key: "creationDate", ascending: true)
+        let query = CKQuery(recordType: "Whitelist", predicate: pred)
+        query.sortDescriptors = [sort]
+        
+        let operation = CKQueryOperation(query: query)
+        operation.resultsLimit = 50
+        
+        var newWhiteList = [WhiteList]()
+        
+        operation.recordFetchedBlock = { record in
+            let whitelist = WhiteList()
+            whitelist.name = record["name"]
+            newWhiteList.append(whitelist)
+            
+            print("Fetched!")
+        }
+        
+        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    ContentCreatorFrameViewController.isDirty = false
+                    self.whitelisters = newWhiteList
+                    
+                    print("Loaded!")
+                } else {
+                    let ac = UIAlertController(title: "Failed to Load!", message: "Unable to fetch data... try again later or check connectivity and refresh data! \(error!.localizedDescription)", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(ac, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
+    }
+    
+    var whitelisters = [WhiteList]()
+    
     @IBAction func signInPress(_ sender: Any) {
+        for i in whitelisters {
+            if i.name == usrField.text!.trimmingCharacters(in: .whitespacesAndNewlines) {
+                let ac = UIAlertController(title: "Error!", message: "You have been whitelisted, sorry your account is disabled. For more information email: myalo3256@gmail.com. Be sure to include your account email! Thank you!", preferredStyle: .alert)
+                
+                self.present(ac, animated: true, completion: nil)
+                
+                return
+            }
+        }
+        
         guard let email = usrField.text, !email.isEmpty, let pw = pwField.text, !pw.isEmpty else {
             print("Missing info")
             return
@@ -85,9 +137,7 @@ class SignInViewController: UIViewController {
             }
         }))
         
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (_) in
-            //do nothing
-        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)
     }

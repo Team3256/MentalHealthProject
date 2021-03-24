@@ -23,6 +23,7 @@
 		5B3EBEFB25EED4CA001B33A2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3EBEFA25EED4CA001B33A2 /* ProfileViewController.swift */; };
 		5B504A792609940A00DCDC5E /* CensorMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B504A782609940A00DCDC5E /* CensorMethods.swift */; };
 		5B5F31D8260999AB0088E7FC /* NewsletterMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F31D7260999AB0088E7FC /* NewsletterMakerViewController.swift */; };
+		5B5F31DF260A41530088E7FC /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F31DE260A41530088E7FC /* AnimationViewController.swift */; };
 		5B60A52E260501DE00C47358 /* SpecBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */; };
 		5B60A5332605073800C47358 /* BasicGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A5322605073800C47358 /* BasicGenViewController.swift */; };
 		5B60A5382605088900C47358 /* TherapistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A5372605088900C47358 /* TherapistViewController.swift */; };
@@ -94,6 +95,7 @@
 		5B3EBEFA25EED4CA001B33A2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B504A782609940A00DCDC5E /* CensorMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensorMethods.swift; sourceTree = "<group>"; };
 		5B5F31D7260999AB0088E7FC /* NewsletterMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterMakerViewController.swift; sourceTree = "<group>"; };
+		5B5F31DE260A41530088E7FC /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		5B60A52D260501DE00C47358 /* SpecBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecBlogViewController.swift; sourceTree = "<group>"; };
 		5B60A5322605073800C47358 /* BasicGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGenViewController.swift; sourceTree = "<group>"; };
 		5B60A5372605088900C47358 /* TherapistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,14 @@
 			path = Censor;
 			sourceTree = "<group>";
 		};
+		5B5F31DD260A413B0088E7FC /* AnimationOnLoad */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F31DE260A41530088E7FC /* AnimationViewController.swift */,
+			);
+			path = AnimationOnLoad;
+			sourceTree = "<group>";
+		};
 		5B60A54326050D5400C47358 /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +319,7 @@
 		5BD5CE6C25E1E77E001C70DF /* Sign-In */ = {
 			isa = PBXGroup;
 			children = (
+				5B5F31DD260A413B0088E7FC /* AnimationOnLoad */,
 				5B38C49525E6B8C300D38703 /* SignInViewController.swift */,
 				5B0C2EA925DF4A6F00F36D91 /* ViewController.swift */,
 			);
@@ -659,6 +670,7 @@
 				5BFEAC0E26057A5C000AAA62 /* AddReviewViewController.swift in Sources */,
 				5B60A5332605073800C47358 /* BasicGenViewController.swift in Sources */,
 				5B0C2EAA25DF4A6F00F36D91 /* ViewController.swift in Sources */,
+				5B5F31DF260A41530088E7FC /* AnimationViewController.swift in Sources */,
 				5BA901442607FE2E0027BC2E /* NewsletterViewController.swift in Sources */,
 				5B0C2EA625DF4A6F00F36D91 /* AppDelegate.swift in Sources */,
 				5BA9013F2607F14C0027BC2E /* AdminMainViewController.swift in Sources */,
