@@ -16,7 +16,8 @@ class AnimationViewController: ViewController {
         super.viewDidLoad()
 
         Utilities.styleButton(myButton)
-        myButton.setImage(UIImage(named: "appLogo"), for: .normal)
+        
+        myButton.layer.cornerRadius = 30
         
         animate()
     }

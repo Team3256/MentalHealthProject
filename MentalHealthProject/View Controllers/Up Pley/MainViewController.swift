@@ -21,14 +21,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var eventButton: UIButton!
-    @IBOutlet weak var viewButton: UIButton!
     
     var gyms = [Gym]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Utilities.styleButton(viewButton)
         Utilities.styleButton(eventButton)
         
         tableView.register(GymCell.nib(), forCellReuseIdentifier: "cell")
@@ -103,7 +100,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deselectRow(at: indexPath, animated: true)
         
         currentSel = gyms[indexPath.row]
-        viewButton.setTitle("\(gyms[indexPath.row].name!)", for: .normal)
+        
+        self.performSegue(withIdentifier: "gymSelect", sender: nil)
     }
     
 }

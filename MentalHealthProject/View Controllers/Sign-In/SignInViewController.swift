@@ -28,6 +28,8 @@ class SignInViewController: UIViewController {
         Utilities.styleTextFieldmain(usrField)
         Utilities.styleTextFieldmain(pwField)
         
+        Utilities.styleButton(signInButton)
+        
         nextButton.isHidden = true
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -109,6 +111,8 @@ class SignInViewController: UIViewController {
             
             strongSelf.nextButton.isHidden = false
             strongSelf.googleButton.isHidden = true
+            
+            self!.performSegue(withIdentifier: "signedIn", sender: nil)
         })
     }
     
@@ -135,6 +139,8 @@ class SignInViewController: UIViewController {
                 strongSelf.nextButton.isHidden = false
                 strongSelf.googleButton.isHidden = true
             }
+            
+            self.performSegue(withIdentifier: "signedIn", sender: nil)
         }))
         
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
@@ -154,8 +160,7 @@ extension SignInViewController: GIDSignInDelegate {
         print(currentUserEmail)
         
         if currentUserEmail != "N/A" {
-            signInButton.isHidden = false
-            nextButton.isHidden = false
+            self.performSegue(withIdentifier: "signedIn", sender: nil)
         }
     }
 }

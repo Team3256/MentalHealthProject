@@ -24,10 +24,7 @@ class JournalsViewController: UIViewController, UITextFieldDelegate {
         
         Utilities.styleTextFieldsub(titleField)
         
-        saveButton.layer.cornerRadius = 30
-        saveButton.setTitleColor(.green, for: .normal) //orange yellow
-        saveButton.backgroundColor = .systemGray //usafa blu
-        saveButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        Utilities.styleButton(saveButton)
         
         titleField.text = ""
         bodyText.text = "Start journaling!"
@@ -204,6 +201,8 @@ class JournalsViewController: UIViewController, UITextFieldDelegate {
                 bodyText.text = "Start journaling..."
                 
                 try! context.save()
+                
+                self.performSegue(withIdentifier: "saveAs", sender: nil)
             }
         }
     }

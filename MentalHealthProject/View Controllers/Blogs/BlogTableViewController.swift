@@ -19,7 +19,6 @@ class BlogTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var blogViewButton: UIButton!
     
     var blogs = [Blog]()
     
@@ -32,10 +31,6 @@ class BlogTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         loadBlogs()
         tableView.reloadData()
-        
-        blogViewButton.layer.cornerRadius = 30
-        blogViewButton.setTitleColor(.blue, for: .normal)
-        blogViewButton.backgroundColor = .systemGray
     }
     
     @objc func tapOutside() {
@@ -100,9 +95,9 @@ class BlogTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        blogViewButton.setTitle(blogs[indexPath.row].title, for: .normal)
-        
         blog = blogs[indexPath.row]
+        
+        self.performSegue(withIdentifier: "blogSelect", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

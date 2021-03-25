@@ -73,7 +73,7 @@ class Utilities {
     static func styleButton(_ button: UIButton) {
         button.layer.cornerRadius = 30
         button.backgroundColor = .systemGray
-        button.setTitleColor(.green, for: .normal)
+        button.setTitleColor(.systemIndigo, for: .normal)
     }
     
 }

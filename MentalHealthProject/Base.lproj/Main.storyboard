@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t63-Jx-otq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -84,40 +85,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEN-6r-RqK">
-                                <rect key="frame" x="82" y="762" width="250" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2EP-Fv-ah9"/>
-                                    <constraint firstAttribute="width" constant="250" id="lnL-Xl-eIr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <segue destination="6Jh-SM-Oik" kind="show" id="cHy-4p-Pfs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-PQ-BSv">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Mmw-Mg-syr"/>
                                     <constraint firstAttribute="height" constant="200" id="zaS-1l-2h3"/>
                                 </constraints>
-                                <state key="normal" image="skul"/>
+                                <state key="normal" image="appLogo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d76-Mq-WPA">
+                                <rect key="frame" x="82" y="762" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="QKX-gw-7sb"/>
+                                    <constraint firstAttribute="height" constant="50" id="TTM-f3-9MP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="6Jh-SM-Oik" kind="show" id="RVl-6t-CJl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yyn-aq-Whe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="d76-Mq-WPA" firstAttribute="centerX" secondItem="Fh4-Fu-GEu" secondAttribute="centerX" id="64q-JR-EDT"/>
                             <constraint firstItem="Drf-PQ-BSv" firstAttribute="centerX" secondItem="Fh4-Fu-GEu" secondAttribute="centerX" id="9ci-4E-Qv2"/>
                             <constraint firstItem="Drf-PQ-BSv" firstAttribute="centerY" secondItem="Fh4-Fu-GEu" secondAttribute="centerY" id="Cec-FM-mn2"/>
-                            <constraint firstItem="Yyn-aq-Whe" firstAttribute="bottom" secondItem="HEN-6r-RqK" secondAttribute="bottom" constant="50" id="gxo-F7-xUv"/>
-                            <constraint firstItem="HEN-6r-RqK" firstAttribute="centerX" secondItem="Fh4-Fu-GEu" secondAttribute="centerX" id="uTW-mk-ffp"/>
+                            <constraint firstItem="Yyn-aq-Whe" firstAttribute="bottom" secondItem="d76-Mq-WPA" secondAttribute="bottom" constant="50" id="Qtt-zD-WV4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CDa-Mk-C7o"/>
                     <connections>
                         <outlet property="animButon" destination="Drf-PQ-BSv" id="feZ-0Q-vXc"/>
-                        <outlet property="myButton" destination="HEN-6r-RqK" id="aYu-zh-D4w"/>
+                        <outlet property="myButton" destination="d76-Mq-WPA" id="fH4-pv-Jbr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9aZ-g7-zX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,9 +197,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="zgN-XG-4Of" kind="show" id="fXu-Rm-G6R"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iYB-ie-LsD"/>
@@ -223,6 +221,7 @@
                         <outlet property="pwField" destination="Hr5-We-Bxj" id="xyy-3K-5qR"/>
                         <outlet property="signInButton" destination="Ue8-7d-3fS" id="mCT-U1-QeS"/>
                         <outlet property="usrField" destination="Ps7-E2-zwk" id="nal-cG-D7M"/>
+                        <segue destination="zgN-XG-4Of" kind="show" identifier="signedIn" id="2it-ZQ-fLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwK-cr-dMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,7 +248,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEo-EV-ToZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1747.826086956522" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1748" y="131"/>
         </scene>
         <!--Journal-->
         <scene sceneID="bqK-j2-frz">
@@ -459,7 +458,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressSave:" destination="GSd-C4-PwZ" eventType="touchUpInside" id="BRR-v0-b5R"/>
-                                    <segue destination="NhY-EN-u7V" kind="show" id="I8t-yI-L7n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -481,6 +479,7 @@
                         <outlet property="bodyText" destination="AV8-J5-scM" id="mpj-CN-yRG"/>
                         <outlet property="saveButton" destination="C2A-ke-tLK" id="HSd-VU-79n"/>
                         <outlet property="titleField" destination="erS-8j-Y88" id="aaf-Qi-1Y3"/>
+                        <segue destination="NhY-EN-u7V" kind="show" identifier="saveAs" id="sar-kv-F3Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab5-Sq-vbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -973,7 +972,7 @@
                                 <rect key="frame" x="10" y="108" width="394" height="734"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-LL-F1B">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="674"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="734"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="pPh-H4-wH7">
@@ -986,17 +985,6 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-my-i6G">
-                                        <rect key="frame" x="0.0" y="684" width="394" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="KZ0-Ty-2SU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="View Selected Blog"/>
-                                        <connections>
-                                            <segue destination="SVR-bO-cgb" kind="show" id="BQQ-5g-dQM"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1012,8 +1000,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Blogs" id="pxi-RJ-6dG"/>
                     <connections>
-                        <outlet property="blogViewButton" destination="LPu-my-i6G" id="bXv-vK-JxH"/>
                         <outlet property="tableView" destination="wc0-LL-F1B" id="cgi-Xs-cfk"/>
+                        <segue destination="SVR-bO-cgb" kind="show" identifier="blogSelect" id="WBL-6I-XbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl6-zG-DVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1183,7 +1171,7 @@
                                         <rect key="frame" x="0.0" y="80" width="394" height="625"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NOc-vh-GMD">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="570"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="625"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ZXu-Uo-HkD">
@@ -1196,17 +1184,6 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omo-bS-8kN">
-                                                <rect key="frame" x="0.0" y="575" width="394" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="SH6-4O-5Ax"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <state key="normal" title="View Selected Gym"/>
-                                                <connections>
-                                                    <segue destination="LVj-rE-3f6" kind="show" id="PG2-4v-egf"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1225,7 +1202,7 @@
                     <connections>
                         <outlet property="eventButton" destination="MOY-8A-lWJ" id="jqF-iF-QlW"/>
                         <outlet property="tableView" destination="NOc-vh-GMD" id="SHS-1q-NLR"/>
-                        <outlet property="viewButton" destination="omo-bS-8kN" id="Iyi-3a-NaJ"/>
+                        <segue destination="LVj-rE-3f6" kind="show" identifier="gymSelect" id="bDV-h6-oOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scY-Wh-vKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1543,17 +1520,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yj0-RX-eqw"/>
+        <segue reference="sar-kv-F3Z"/>
         <segue reference="OmI-Yt-Vlx"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="appLogo" width="322" height="284"/>
+        <image name="doc.text" catalog="system" width="32" height="32"/>
         <image name="p.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.and.outline" catalog="system" width="128" height="128"/>
         <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="skul" width="1427" height="1125"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
