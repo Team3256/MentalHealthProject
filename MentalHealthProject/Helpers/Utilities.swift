@@ -18,7 +18,7 @@ class Utilities {
         
         bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
         
-        bottomLine.backgroundColor = UIColor.init(red: 38/255, green: 84/255, blue: 124/255, alpha: 1).cgColor
+        bottomLine.backgroundColor = #colorLiteral(red: 0.3282724619, green: 0.8540354371, blue: 0.9719800353, alpha: 1)
         
         // Remove border on text field
         textfield.borderStyle = .none
@@ -73,7 +73,7 @@ class Utilities {
     static func styleButton(_ button: UIButton) {
         button.layer.cornerRadius = 30
         button.backgroundColor = .systemGray
-        button.setTitleColor(.systemIndigo, for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.3282724619, green: 0.8540354371, blue: 0.9719800353, alpha: 1), for: .normal)
     }
     
 }

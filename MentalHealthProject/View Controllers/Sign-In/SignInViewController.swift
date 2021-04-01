@@ -13,8 +13,7 @@ import CloudKit
 var currentUserEmail = ""
 
 
-class SignInViewController: UIViewController {
-    
+class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usrField: UITextField!
     @IBOutlet weak var pwField: UITextField!
@@ -23,10 +22,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
+        usrField.delegate = self
+        pwField.delegate = self
+        
         super.viewDidLoad()
         
-        Utilities.styleTextFieldmain(usrField)
-        Utilities.styleTextFieldmain(pwField)
+        Utilities.styleTextFieldsub(usrField)
+        Utilities.styleTextFieldsub(pwField)
         
         Utilities.styleButton(signInButton)
         
@@ -36,6 +38,12 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.delegate = self
         
         fetchCK()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     func fetchCK() {

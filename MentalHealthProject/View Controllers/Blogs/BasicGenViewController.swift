@@ -17,10 +17,10 @@ class BasicGenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        styleButton(blogB)
-        styleButton(therapistB)
-        styleButton(newsletterB)
-        styleButton(faqB)
+        Utilities.styleButton(blogB)
+        Utilities.styleButton(therapistB)
+        Utilities.styleButton(newsletterB)
+        Utilities.styleButton(faqB)
     }
     
     func styleButton(_ button: UIButton) {

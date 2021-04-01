@@ -16,10 +16,7 @@ class JournalBGViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        myJour.layer.cornerRadius = 30
-        myJour.backgroundColor = .systemGray //orange-yellow
-        myJour.setTitleColor(.green, for: .normal) //usafa blu
-        myJour.titleLabel?.adjustsFontSizeToFitWidth = true
+        Utilities.styleButton(myJour)
     }
     
     @IBAction func journal1Press(_ sender: Any) {

@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Utilities.styleTextFieldsub(switchAcct)
+        
         switchAcct.delegate = self
         
         adminButton.isHidden = true
